@@ -50,7 +50,7 @@ public class CherControl : MonoBehaviour {
 		rigidbody.velocity = new Vector3(horzSpeed, rigidbody.velocity.y, vertSpeed);
 		dude.transform.Rotate(new Vector3(rigidbody.velocity.z, 0, -rigidbody.velocity.x), Space.World);
 		
-		if(Input.GetButton ("Attack")){
+		if(Input.GetButton ("Fire1")){
 			weapon.animation.Play ("Attack");
 		}
 		
