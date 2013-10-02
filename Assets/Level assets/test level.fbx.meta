@@ -1,0 +1,124 @@
+fileFormatVersion: 2
+guid: 8653e59b10a176548bdd8fe46f28771c
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: bigman
+    100004: bigman_bones
+    100006: Camera
+    100008: diamond
+    100010: diamond_beam
+    100012: diamond_bones
+    100014: inside
+    100016: Lamp
+    100018: main_bone
+    100020: outside
+    100022: platform
+    100024: ramps
+    100026: spinner
+    100028: Tank
+    100030: tank_bullet
+    100032: Test_level
+    100034: test_level_default
+    400000: //RootNode
+    400002: bigman
+    400004: bigman_bones
+    400006: Camera
+    400008: diamond
+    400010: diamond_beam
+    400012: diamond_bones
+    400014: inside
+    400016: Lamp
+    400018: main_bone
+    400020: outside
+    400022: platform
+    400024: ramps
+    400026: spinner
+    400028: Tank
+    400030: tank_bullet
+    400032: Test_level
+    400034: test_level_default
+    2300000: //RootNode
+    2300002: bigman
+    2300004: diamond_beam
+    2300006: platform
+    2300008: ramps
+    2300010: Tank
+    2300012: tank_bullet
+    2300014: Test_level
+    2300016: test_level_default
+    3300000: //RootNode
+    3300002: bigman
+    3300004: diamond_beam
+    3300006: platform
+    3300008: ramps
+    3300010: Tank
+    3300012: tank_bullet
+    3300014: Test_level
+    3300016: test_level_default
+    4300000: Test_level
+    4300002: tank_bullet
+    4300004: diamond_beam
+    4300006: bigman
+    4300008: Tank
+    4300010: ramps
+    4300012: platform
+    4300014: diamond
+    4300016: test_level_default
+    7400000: Default Take
+    7400002: ArmatureAction
+    9500000: //RootNode
+    13700000: diamond
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 
