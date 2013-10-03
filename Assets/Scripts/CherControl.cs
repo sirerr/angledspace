@@ -46,7 +46,7 @@ public class CherControl : MonoBehaviour {
 		horzSpeed = incSpeed*Input.GetAxis ("Horizontal");
 		vertSpeed = incSpeed*Input.GetAxis ("Vertical");
 		
-		//transform.LookAt (+this.transform.position);
+		transform.LookAt (transform.position);
 		rigidbody.velocity = new Vector3(horzSpeed, rigidbody.velocity.y, vertSpeed);
 		dude.transform.Rotate(new Vector3(rigidbody.velocity.z, 0, -rigidbody.velocity.x), Space.World);
 		

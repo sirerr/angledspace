@@ -13,9 +13,9 @@ public class WeapHit : MonoBehaviour {
 	
 	}
 	
-	/*void OnTriggerEnter(Collider target){
+	void OnTriggerEnter(Collider target){
 		if(target.tag == "Enemy"){
 			target.gameObject.SendMessage ("takeHit");
 		}
-	}*/
+	}
 }

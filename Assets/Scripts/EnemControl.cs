@@ -15,13 +15,21 @@ public class EnemControl : MonoBehaviour {
 	
 	}
 	
-	void OnTriggerEnter(Collider target){
+	/*void OnTriggerEnter(Collider target){
 		if(target.tag == "PWeapon"){
 			health--;
 			
 			if(health <= 0){
 				Destroy (this.gameObject);
 			}
+		}
+	}*/
+	
+	void takeHit(){
+		health--;
+		
+		if(health <= 0){
+			Destroy (this.gameObject);
 		}
 	}
 }
