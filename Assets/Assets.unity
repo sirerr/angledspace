@@ -1553,6 +1553,105 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1035727699}
+--- !u!1 &199824459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100008, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
+  m_PrefabInternal: {fileID: 907377049}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 199824460}
+  - 33: {fileID: 199824465}
+  - 23: {fileID: 199824464}
+  - 95: {fileID: 199824463}
+  - 54: {fileID: 199824462}
+  - 114: {fileID: 199824461}
+  m_Layer: 0
+  m_Name: sword
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &199824460
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400008, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
+  m_PrefabInternal: {fileID: 907377049}
+  m_GameObject: {fileID: 199824459}
+  m_LocalRotation: {x: -.5, y: -.5, z: .5, w: .5}
+  m_LocalPosition: {x: -.627038479, y: 0, z: 0}
+  m_LocalScale: {x: 26.4599991, y: 26.4599991, z: 26.4599991}
+  m_Children: []
+  m_Father: {fileID: 1503569659}
+--- !u!114 &199824461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400006, guid: c518dd1c579c5964bb39b8e7766a9367,
+    type: 2}
+  m_PrefabInternal: {fileID: 907377049}
+  m_GameObject: {fileID: 199824459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d1d45dc3fd2d4d4d9f8880d5703ce6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &199824462
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400004, guid: c518dd1c579c5964bb39b8e7766a9367,
+    type: 2}
+  m_PrefabInternal: {fileID: 907377049}
+  m_GameObject: {fileID: 199824459}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!95 &199824463
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: c518dd1c579c5964bb39b8e7766a9367,
+    type: 2}
+  m_PrefabInternal: {fileID: 907377049}
+  m_GameObject: {fileID: 199824459}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: ce7ea222714601b418ed08d6b2a7a2a4, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+--- !u!23 &199824464
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300004, guid: c518dd1c579c5964bb39b8e7766a9367,
+    type: 2}
+  m_PrefabInternal: {fileID: 907377049}
+  m_GameObject: {fileID: 199824459}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 33a42afff18fd8345b7167e573b50a1e, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+--- !u!33 &199824465
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300004, guid: c518dd1c579c5964bb39b8e7766a9367,
+    type: 2}
+  m_PrefabInternal: {fileID: 907377049}
+  m_GameObject: {fileID: 199824459}
+  m_Mesh: {fileID: 4300000, guid: ce7ea222714601b418ed08d6b2a7a2a4, type: 3}
 --- !u!1 &203617972
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,7 +1791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &276861627
 Transform:
   m_ObjectHideFlags: 0
@@ -3907,6 +4006,7 @@ GameObject:
   - 23: {fileID: 650207161}
   - 95: {fileID: 650207160}
   - 64: {fileID: 650207164}
+  - 114: {fileID: 650207165}
   m_Layer: 0
   m_Name: tank
   m_TagString: Enemy
@@ -3979,6 +4079,178 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 7b313169eaf49ca408b069937877e4e1, type: 3}
+--- !u!114 &650207165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 650207159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fsm:
+    usedInTemplate: {fileID: 0}
+    name: FSM
+    startState: get distance
+    states:
+    - name: get distance
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 50
+        y: 100
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: react
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: rotate
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetDistance
+        - HutongGames.PlayMaker.Actions.FloatCompare
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000004000000
+        actionHashCodes: f4c9cbe653489ed1
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 1627703060}
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        byteData: 0000000001656e656d792064697374616e6365010000000001656e656d792064697374616e636500009642000000000000726561637401
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 14000000130000000f000000010000000f0000000f0000000f00000017000000170000001700000001000000
+        paramName:
+        - gameObject
+        - target
+        - storeResult
+        - everyFrame
+        - float1
+        - float2
+        - tolerance
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
+        paramDataPos: 0000000000000000000000001300000014000000270000002c00000031000000310000003600000036000000
+        paramByteDataSize: 0000000000000000130000000100000013000000050000000500000000000000050000000000000001000000
+    - name: rotate
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 207
+        y: 142
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    events:
+    - name: react
+      isSystemEvent: 0
+      isGlobal: 0
+    globalTransitions: []
+    variables:
+      floatVariables:
+      - useVariable: 1
+        name: enemy distance
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      intVariables: []
+      boolVariables: []
+      stringVariables: []
+      vector2Variables: []
+      vector3Variables: []
+      colorVariables: []
+      rectVariables: []
+      quaternionVariables: []
+      gameObjectVariables: []
+      objectVariables: []
+      materialVariables: []
+      textureVariables: []
+    description: 
+    docUrl: 
+    showStateLabel: 1
+    maxLoopCount: 0
+    watermark: 
+    version: 0
+    ExposedEvents: []
+    RestartOnEnable: 1
+    EnableDebugFlow: 0
+    StepFrame: 0
+    activeStateName: 
+  fsmTemplate: {fileID: 0}
 --- !u!1 &684150526
 GameObject:
   m_ObjectHideFlags: 0
@@ -5657,6 +5929,10 @@ Prefab:
       propertyPath: incSpeed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
   m_RootGameObject: {fileID: 1627703060}
@@ -6937,6 +7213,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 33a42afff18fd8345b7167e573b50a1e, type: 2}
+    - target: {fileID: 100000, guid: ce7ea222714601b418ed08d6b2a7a2a4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce7ea222714601b418ed08d6b2a7a2a4, type: 3}
   m_RootGameObject: {fileID: 276861626}
@@ -7053,7 +7333,7 @@ GameObject:
   - 54: {fileID: 1141298234}
   m_Layer: 0
   m_Name: Cubex
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7105,7 +7385,7 @@ Transform:
   m_PrefabInternal: {fileID: 1241340970}
   m_GameObject: {fileID: 1141298229}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 139.32309, y: -6.66836262, z: -67.5290833}
+  m_LocalPosition: {x: 139.32309, y: -9.9203043, z: -67.5290833}
   m_LocalScale: {x: 1.5, y: 4.98274755, z: 1}
   m_Children:
   - {fileID: 1240906427}
@@ -7609,7 +7889,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 679daa8d0af133f499b22cc6d7068435, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -6.66836262
+      value: -9.9203043
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 679daa8d0af133f499b22cc6d7068435, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7635,6 +7915,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 100004, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
+    - target: {fileID: 100000, guid: 679daa8d0af133f499b22cc6d7068435, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 679daa8d0af133f499b22cc6d7068435, type: 2}
   m_RootGameObject: {fileID: 1141298229}
@@ -8206,6 +8490,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2084610845}
+  - {fileID: 199824460}
   - {fileID: 276861627}
   m_Father: {fileID: 1627703061}
 --- !u!111 &1503569660
@@ -8223,7 +8508,7 @@ Animation:
   - {fileID: 7400000, guid: f38997f80a240e245a0745a525486a98, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
+  m_AnimatePhysics: 1
   m_CullingType: 0
   m_UserAABB:
     m_Center: {x: 0, y: 0, z: 0}
@@ -8329,7 +8614,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 907377049}
   m_GameObject: {fileID: 1627703060}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
   m_Name: 
@@ -10421,6 +10706,7 @@ GameObject:
   - 65: {fileID: 2084610848}
   - 23: {fileID: 2084610847}
   - 114: {fileID: 2084610846}
+  - 54: {fileID: 2084610850}
   m_Layer: 0
   m_Name: Box
   m_TagString: PWeapon
@@ -10491,6 +10777,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 907377049}
   m_GameObject: {fileID: 2084610844}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2084610850
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400002, guid: c518dd1c579c5964bb39b8e7766a9367,
+    type: 2}
+  m_PrefabInternal: {fileID: 907377049}
+  m_GameObject: {fileID: 2084610844}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &2107358649
 Prefab:
   m_ObjectHideFlags: 0
