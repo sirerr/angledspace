@@ -23,9 +23,13 @@ public class CubexControl : MonoBehaviour {
 		//playerLoc = player.transform.position;
 		
 		if(punch == true){
-			pickHand.rigidbody.MovePosition(Vector3.MoveTowards (pickHand.rigidbody.position, playerLoc, speed*Time.deltaTime));
+			pickHand.rigidbody.MovePosition(Vector3.MoveTowards (pickHand.rigidbody.position, playerLoc, speed));
 		}else{
-			pickHand.rigidbody.MovePosition(Vector3.MoveTowards (pickHand.rigidbody.position, handLoc, speed*Time.deltaTime));
+			pickHand.rigidbody.MovePosition(Vector3.MoveTowards (pickHand.rigidbody.position, handLoc, speed));
+			
+			if(pickHand.rigidbody.position == handLoc){
+				//StartCoroutine ("waitAttack");
+			}
 		}
 		
 		if(pickHand.rigidbody.position == playerLoc){
@@ -33,25 +37,61 @@ public class CubexControl : MonoBehaviour {
 		}
 	}
 	
+	/*IEnumerator waitAttack(){
+		yield return new WaitForSeconds(2);
+		
+		doAttack ();
+	}
+	
+	void doAttack(){
+		int hand = Random.Range (0, 2);
+		print (punch);
+		if(hand == 0){
+			pickHand = leftHand;
+		}else if(hand == 1){
+			pickHand = rightHand;
+		}
+		
+		playerLoc = player.transform.position;
+		handLoc = pickHand.transform.position;
+		punch = true;
+		
+		StartCoroutine ("handOut");
+	}
+	
+	IEnumerator handOut(){
+		yield return new WaitForSeconds(1);
+		
+		punch = false;
+	}*/
+	
 	IEnumerator doAttack(){
 		while(true){
+			yield return new WaitForSeconds(2);
+		int hand = Random.Range (0, 2);
+		
+		if(hand == 0){
+			pickHand = leftHand;
+		}else if(hand == 1){
+			pickHand = rightHand;
+		}
+		
+		playerLoc = player.transform.position;
+		handLoc = pickHand.transform.position;
+		punch = true;
+			
 			yield return new WaitForSeconds(1);
-			
-			int hand = Random.Range (0, 2);
-			print (punch);
-			if(hand == 0){
-				pickHand = leftHand;
-			}else if(hand == 1){
-				pickHand = rightHand;
-			}
-			
-			playerLoc = player.transform.position;
-			handLoc = pickHand.transform.position;
-			punch = true;
-			
-			yield return new WaitForSeconds(1);
-			
 			punch = false;
+		
+		//StartCoroutine ("handOut");
+		}
+	}
+	
+	void OnCollisionEnter(Collision target){
+		if(target.rigidbody.tag == "Player"){
+			target.rigidbody.SendMessage ("takeHit");
+			punch = false;
+			Debug.Log (target.rigidbody.tag);
 		}
 	}
 }

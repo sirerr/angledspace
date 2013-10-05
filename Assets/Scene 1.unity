@@ -85,6 +85,7 @@ GameObject:
   - 114: {fileID: 263466659}
   - 114: {fileID: 263466658}
   - 54: {fileID: 263466657}
+  - 135: {fileID: 263466661}
   m_Layer: 0
   m_Name: Player Controller
   m_TagString: Player
@@ -480,6 +481,8 @@ MonoBehaviour:
   dude: {fileID: 1955511642}
   weapon: {fileID: 1056993617}
   weapTrigger: {fileID: 1554214981}
+  maxHealth: 5
+  maxPower: 0
   incSpeed: 10
   maxSpeed: 0
   jumpPow: 30
@@ -497,6 +500,18 @@ Transform:
   - {fileID: 1955511643}
   - {fileID: 1056993618}
   m_Father: {fileID: 0}
+--- !u!135 &263466661
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 263466656}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &277362799
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +713,14 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
   m_RootGameObject: {fileID: 263466656}
@@ -778,8 +801,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 551139130}
-  m_LocalRotation: {x: .173648193, y: 0, z: 0, w: .984807789}
-  m_LocalPosition: {x: 0, y: 10, z: -30}
+  m_LocalRotation: {x: .122787811, y: .696364284, z: -.122787811, w: .696364284}
+  m_LocalPosition: {x: -23.5636768, y: 18.5764771, z: -14.2055922}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1039,7 +1062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftHand: {fileID: 2112803481}
   rightHand: {fileID: 1982274387}
-  player: {fileID: 0}
+  player: {fileID: 263466656}
 --- !u!54 &1415140163
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1205,7 +1228,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 679daa8d0af133f499b22cc6d7068435, type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 263466656}
     - target: {fileID: 100000, guid: 679daa8d0af133f499b22cc6d7068435, type: 2}
       propertyPath: m_TagString
       value: Enemy
@@ -1216,6 +1239,26 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5400000, guid: 679daa8d0af133f499b22cc6d7068435, type: 2}
       propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400002, guid: 679daa8d0af133f499b22cc6d7068435, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400002, guid: 679daa8d0af133f499b22cc6d7068435, type: 2}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400004, guid: 679daa8d0af133f499b22cc6d7068435, type: 2}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400004, guid: 679daa8d0af133f499b22cc6d7068435, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400004, guid: 679daa8d0af133f499b22cc6d7068435, type: 2}
+      propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1236,7 +1279,7 @@ GameObject:
   - 23: {fileID: 1955511644}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
