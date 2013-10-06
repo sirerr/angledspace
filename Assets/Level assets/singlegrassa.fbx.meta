@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 63c9ae21c792cd54ca08966c689a7184
+guid: a396d3a5f4a013b46b4619c6a2937e47
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
@@ -7,8 +7,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: grass
-    4300002: manygrassa
+    4300000: single_grassa
     7400000: Default Take
     9500000: //RootNode
   materials:
