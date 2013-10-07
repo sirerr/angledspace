@@ -29,6 +29,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   - 111: {fileID: 11100000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: diamond
   m_TagString: Enemy
@@ -61,7 +62,7 @@ GameObject:
   - 4: {fileID: 400006}
   m_Layer: 0
   m_Name: diamond center
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,7 +159,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 92.3427353, y: -13.7983551, z: -89.1482697}
+  m_LocalPosition: {x: 114.483932, y: -11.7842026, z: -89.1482697}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -242,12 +243,14 @@ Animation:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: f984c7f99fa0b444596ab73069b14e7f, type: 2}
+  m_Animation: {fileID: 7400000, guid: 5fa756b116d01254fbce61690dce9ba9, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 469dfa9f622e0cb428ba939bdc44f26c, type: 2}
   - {fileID: 7400002, guid: a13a8b07a155a1947bf3008ccfe5b75e, type: 3}
   - {fileID: 7400000, guid: 8e31c725b381fec439096dd0f10e6667, type: 2}
   - {fileID: 7400000, guid: f984c7f99fa0b444596ab73069b14e7f, type: 2}
+  - {fileID: 7400000, guid: 5fa756b116d01254fbce61690dce9ba9, type: 2}
+  - {fileID: 7400000, guid: e304a2cf1e0ce90498ff7372c5c90cdf, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -255,6 +258,113 @@ Animation:
   m_UserAABB:
     m_Center: {x: 0, y: 1.39698386e-09, z: -.0399999991}
     m_Extent: {x: .0155563494, y: .00283053052, z: .0233345255}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fsm:
+    usedInTemplate: {fileID: 0}
+    name: FSM
+    startState: slow down animation
+    states:
+    - name: slow down animation
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 50
+        y: 100
+        width: 160
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.AnimationSettings
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 512ebf3c
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Diamond Idle
+        fsmObjectParams: []
+        fsmVarParams: []
+        byteData: 02000000000000000000003f000000000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 140000001200000007000000070000000f00000010000000
+        paramName:
+        - gameObject
+        - animName
+        - wrapMode
+        - blendMode
+        - speed
+        - layer
+        paramDataPos: 00000000000000000000000004000000080000000d000000
+        paramByteDataSize: 000000000000000004000000040000000500000005000000
+    events: []
+    globalTransitions: []
+    variables:
+      floatVariables: []
+      intVariables: []
+      boolVariables: []
+      stringVariables: []
+      vector2Variables: []
+      vector3Variables: []
+      colorVariables: []
+      rectVariables: []
+      quaternionVariables: []
+      gameObjectVariables: []
+      objectVariables: []
+      materialVariables: []
+      textureVariables: []
+    description: 
+    docUrl: 
+    showStateLabel: 1
+    maxLoopCount: 0
+    watermark: 
+    version: 0
+    ExposedEvents: []
+    RestartOnEnable: 1
+    EnableDebugFlow: 0
+    StepFrame: 0
+    activeStateName: 
+  fsmTemplate: {fileID: 0}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
