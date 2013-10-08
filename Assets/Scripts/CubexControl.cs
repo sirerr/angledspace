@@ -13,7 +13,7 @@ public class CubexControl : MonoBehaviour {
 	GameObject pickHand;
 	Vector3 playerLoc;
 	Vector3 handLoc;
-	bool punch;
+	public bool punch = false;
 	float speed = 20;
 	
 	public GameObject player;
@@ -23,9 +23,9 @@ public class CubexControl : MonoBehaviour {
 		//playerLoc = player.transform.position;
 		
 		if(punch == true){
-			pickHand.rigidbody.MovePosition(Vector3.MoveTowards (pickHand.rigidbody.position, playerLoc, speed));
+			pickHand.rigidbody.MovePosition(Vector3.MoveTowards (pickHand.rigidbody.position, playerLoc, speed*Time.deltaTime));
 		}else{
-			pickHand.rigidbody.MovePosition(Vector3.MoveTowards (pickHand.rigidbody.position, handLoc, speed));
+			pickHand.rigidbody.MovePosition(Vector3.MoveTowards (pickHand.rigidbody.position, handLoc, speed*Time.deltaTime));
 			
 			if(pickHand.rigidbody.position == handLoc){
 				//StartCoroutine ("waitAttack");
@@ -84,14 +84,6 @@ public class CubexControl : MonoBehaviour {
 			punch = false;
 		
 		//StartCoroutine ("handOut");
-		}
-	}
-	
-	void OnCollisionEnter(Collision target){
-		if(target.rigidbody.tag == "Player"){
-			target.rigidbody.SendMessage ("takeHit");
-			punch = false;
-			Debug.Log (target.rigidbody.tag);
 		}
 	}
 }
