@@ -8,7 +8,7 @@ public class EnemControl : MonoBehaviour {
 	
 	}
 	
-	public int health;
+	public static int health;
 	
 	// Update is called once per frame
 	void Update () {

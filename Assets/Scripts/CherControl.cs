@@ -20,6 +20,7 @@ public class CherControl : MonoBehaviour {
 	int power;
 	public int maxHealth;
 	public int maxPower;
+	public static int hpHit = 0;
 	
 	
 	public int incSpeed;
@@ -54,7 +55,7 @@ public class CherControl : MonoBehaviour {
 	}
 		
 	void OnGUI(){
-		GUI.Box (new Rect(20, 20, 100, 100), health.ToString ());
+		GUI.Box (new Rect(20, 20, 100, 100), hpHit.ToString ());
 	}
 	
 	void takeHit(){

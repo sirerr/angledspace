@@ -29,6 +29,7 @@ public class CubexControl : MonoBehaviour {
 			
 			if(pickHand.rigidbody.position == handLoc){
 				//StartCoroutine ("waitAttack");
+				rigidbody.MovePosition (Vector3.MoveTowards (transform.position, player.transform.position, speed*Time.deltaTime));
 			}
 		}
 		
