@@ -55,7 +55,7 @@ public class CherControl : MonoBehaviour {
 	}
 		
 	void OnGUI(){
-		GUI.Box (new Rect(20, 20, 100, 100), hpHit.ToString ());
+		GUI.Box (new Rect(20, 20, 100, 100), health.ToString ());
 	}
 	
 	void takeHit(){

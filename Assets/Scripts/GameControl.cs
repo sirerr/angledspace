@@ -1,0 +1,17 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class GameControl : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	public static GameObject player;
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+}
