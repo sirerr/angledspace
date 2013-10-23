@@ -33,10 +33,13 @@ public class CherControl : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {		
 		horzSpeed = incSpeed*Input.GetAxis ("Horizontal");
-		vertSpeed = incSpeed*Input.GetAxis ("Vertical");
+		vertSpeed = -incSpeed*Input.GetAxis ("Vertical");
 		
-		transform.LookAt (transform.position);
-		rigidbody.velocity = Camera.main.worldToCameraMatrix.MultiplyVector (new Vector3(horzSpeed, rigidbody.velocity.y, -vertSpeed));
+		if(Input.GetButton ("Horizontal") || Input.GetButton ("Vertical")){
+			rigidbody.rotation = Quaternion.Lerp (rigidbody.rotation, Quaternion.LookRotation(new Vector3(horzSpeed, rigidbody.velocity.y, -vertSpeed)), Time.deltaTime*10);
+		}
+		
+		rigidbody.velocity = Camera.main.worldToCameraMatrix.MultiplyVector (new Vector3(horzSpeed, rigidbody.velocity.y, vertSpeed));
 		dude.transform.Rotate(new Vector3(rigidbody.velocity.z, 0, -rigidbody.velocity.x), Space.World);
 		
 		if(Input.GetButton ("Fire1")){
