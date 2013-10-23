@@ -5,7 +5,7 @@ public class CubexControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine ("doAttack");
+		//StartCoroutine ("doAttack");
 	}
 	
 	public GameObject leftHand;
@@ -29,7 +29,7 @@ public class CubexControl : MonoBehaviour {
 			
 			if(pickHand.rigidbody.position == handLoc){
 				//StartCoroutine ("waitAttack");
-				rigidbody.MovePosition (Vector3.MoveTowards (transform.position, player.transform.position, speed*Time.deltaTime));
+				//rigidbody.MovePosition (Vector3.MoveTowards (transform.position, player.transform.position, speed*Time.deltaTime));
 			}
 		}
 		
