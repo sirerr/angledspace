@@ -16,7 +16,7 @@ public class CameraControl : MonoBehaviour {
 		//Debug.Log(charPos);
 		
 		if(charPos.x < Screen.width*0.1 || charPos.x > Screen.width*0.9){
-			transform.position += Vector3.right*player.rigidbody.velocity.x*Time.deltaTime;
+			transform.position += Camera.main.worldToCameraMatrix.MultiplyVector( Vector3.right*player.rigidbody.velocity.x*Time.deltaTime);
 		}
 	}
 }

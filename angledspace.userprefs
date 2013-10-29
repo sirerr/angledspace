@@ -1,9 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CubexHit.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Photon Unity Networking\Editor\PhotonNetwork\AccountService.cs">
     <Files>
-      <File FileName="Assets\Scripts\CubexControl.cs" Line="23" Column="3" />
+      <File FileName="Assets\Scripts\CubexControl.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CubexHit.cs" Line="22" Column="5" />
+      <File FileName="Assets\Scripts\CameraControl.cs" Line="19" Column="131" />
+      <File FileName="Assets\Scripts\CherControl.cs" Line="45" Column="33" />
+      <File FileName="Assets\Photon Unity Networking\Editor\PhotonNetwork\AccountService.cs" Line="93" Column="99" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
