@@ -60,6 +60,9 @@ namespace HutongGames.PlayMaker.Actions
                 return;
             }
 
+            fsmTemplateControl.UpdateValues();
+            fsmTemplateControl.ApplyOverrides(runFsm);
+
             runFsm.OnEnable();
 
             if (!runFsm.Started)

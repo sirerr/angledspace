@@ -24,6 +24,7 @@ public class MoveTowardsActionEditor : CustomActionEditor
 
             var lookAtPosition = moveTowardsAction.GetTargetPos();
             var lookAtVector = lookAtPosition - goPosition;
+            if (lookAtVector == Vector3.zero) return;
             var lookAtRotation = Quaternion.LookRotation(lookAtVector);
 
             var handleSize = HandleUtility.GetHandleSize(goPosition);

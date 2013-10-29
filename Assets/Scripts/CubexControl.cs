@@ -5,24 +5,24 @@ public class CubexControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//StartCoroutine ("doAttack");
+		StartCoroutine ("doAttack");
 	}
 	
 	public GameObject leftHand;
 	public GameObject rightHand;
 	GameObject pickHand;
-	Vector3 playerLoc;
+	public Vector3 playerLoc;
 	Vector3 handLoc;
-	public bool punch = false;
-	float speed = 20;
+	//public bool punch = false;
+	public float speed = 20;
 	
 	public GameObject player;
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		//playerLoc = player.transform.position;
+		playerLoc = player.transform.position;
 		
-		if(punch == true){
+		/*if(punch == true){
 			pickHand.rigidbody.MovePosition(Vector3.MoveTowards (pickHand.rigidbody.position, playerLoc, speed*Time.deltaTime));
 		}else{
 			pickHand.rigidbody.MovePosition(Vector3.MoveTowards (pickHand.rigidbody.position, handLoc, speed*Time.deltaTime));
@@ -35,7 +35,7 @@ public class CubexControl : MonoBehaviour {
 		
 		if(pickHand.rigidbody.position == playerLoc){
 			punch = false;
-		}
+		}*/
 	}
 	
 	/*IEnumerator waitAttack(){
@@ -69,20 +69,22 @@ public class CubexControl : MonoBehaviour {
 	IEnumerator doAttack(){
 		while(true){
 			yield return new WaitForSeconds(2);
+		//playerLoc = player.transform.position;
 		int hand = Random.Range (0, 2);
-		
 		if(hand == 0){
-			pickHand = leftHand;
+			//pickHand = leftHand;
+				leftHand.SendMessage ("takeTurn");
 		}else if(hand == 1){
-			pickHand = rightHand;
+			//pickHand = rightHand;
+				rightHand.SendMessage("takeTurn");
 		}
 		
-		playerLoc = player.transform.position;
-		handLoc = pickHand.transform.position;
-		punch = true;
+		
+		//handLoc = pickHand.transform.position;
+		//punch = true;
 			
 			yield return new WaitForSeconds(1);
-			punch = false;
+		//	punch = false;
 		
 		//StartCoroutine ("handOut");
 		}

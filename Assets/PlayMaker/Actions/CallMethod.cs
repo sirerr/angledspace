@@ -5,6 +5,7 @@ using System.Reflection;
 using UnityEngine;
 using System.Collections.Generic;
 using Object = UnityEngine.Object;
+using HutongGames.PlayMaker;
 
 namespace HutongGames.PlayMaker.Actions
 {
@@ -83,7 +84,9 @@ namespace HutongGames.PlayMaker.Actions
             {
                 for (var i = 0; i < parameters.Length; i++)
                 {
-                    parametersArray[i] = parameters[i].GetValue();
+                    var parameter = parameters[i];
+                    parameter.UpdateValue();
+                    parametersArray[i] = parameter.GetValue();
                 }
 
                 result = cachedMethodInfo.Invoke(cachedBehaviour, parametersArray);
@@ -102,7 +105,12 @@ namespace HutongGames.PlayMaker.Actions
             }
 
             cachedType = behaviour.Value.GetType();
+
+#if NETFX_CORE
+            cachedMethodInfo = cachedType.GetTypeInfo().GetDeclaredMethod(methodName.Value);
+#else
             cachedMethodInfo = cachedType.GetMethod(methodName.Value);
+#endif            
             if (cachedMethodInfo == null)
             {
                 errorString += "Method Name is invalid: " + methodName.Value +"\n";
