@@ -9,7 +9,7 @@ using UnityEngine;
 // TODO: move this to dll when Unity supports it...
 
 [System.Serializable]
-class FsmEditorWindow : BaseEditorWindow
+class FsmEditorWindow : HutongGames.PlayMakerEditor.BaseEditorWindow
 {
     /// <summary>
     /// Open the Fsm Editor and optionally show the Welcome Screen

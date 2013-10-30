@@ -1,18 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CubexHit.cs">
     <Files>
-      <File FileName="Assets\Scripts\TankControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\DiamonControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CameraControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CherControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CubexControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\WeapHit.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\EnemControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LaserHit.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\BulletControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Photon Unity Networking\Editor\PhotonNetwork\AccountService.cs" Line="93" Column="99" />
-      <File FileName="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CubexControl.cs" Line="23" Column="3" />
+      <File FileName="Assets\Scripts\CubexHit.cs" Line="22" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

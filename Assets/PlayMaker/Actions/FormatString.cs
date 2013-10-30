@@ -15,10 +15,12 @@ namespace HutongGames.PlayMaker.Actions
         [Tooltip("Variables to use for each formatting item.")]
         public FsmVar[] variables;
 
+        [RequiredField]
         [UIHint(UIHint.Variable)] 
         [Tooltip("Store the formatted result in a string variable.")]
         public FsmString storeResult;
 
+        [Tooltip("Repeat every frame. This is useful if the variables are changing.")]
         public bool everyFrame;
 
         private object[] objectArray;
@@ -53,7 +55,7 @@ namespace HutongGames.PlayMaker.Actions
         {
             for (var i = 0; i < variables.Length; i++)
             {
-                objectArray[i] = variables[i];
+                objectArray[i] = variables[i].GetValue();
             } 
             
             try

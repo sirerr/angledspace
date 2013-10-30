@@ -7,18 +7,40 @@ public class CubexHit : MonoBehaviour {
 	void Start () {
 	
 	}
+
+	bool punch;
+	bool isPick;
+	Vector3 playerLoc;
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void FixedUpdate () {
+		CubexControl control = transform.parent.GetComponent<CubexControl>();
+		if(isPick == true){
+		if(punch == true){
+			//rigidbody.MovePosition(Vector3.MoveTowards (rigidbody.position, control.playerLoc, control.speed*Time.deltaTime));
+		}else{
+		//	rigidbody.MovePosition(Vector3.MoveTowards (rigidbody.position, transform.parent.position, control.speed*Time.deltaTime));
+			
+			if(rigidbody.position == transform.parent.position){
+					isPick = false;
+				//StartCoroutine ("waitAttack");
+				//rigidbody.MovePosition (Vector3.MoveTowards (transform.position, player.transform.position, speed*Time.deltaTime));
+			}
+			}
+		}	
 	}
 	
+	void takeTurn(){
+		//playerLoc = transform.parent.GetComponent<CubexControl>().player.transform.position;
+		isPick = true;
+		punch = true;
+	}
 	
 	void OnTriggerEnter(Collider target){
-	CubexControl control = transform.parent.GetComponent<CubexControl>();
+	//CubexControl control = transform.parent.GetComponent<CubexControl>();
 		if(target.tag == "Player"){
 			target.SendMessage ("takeHit");
-			control.punch = false;
+			punch = false;
 			Debug.Log (target.tag);
 		}
 	}
