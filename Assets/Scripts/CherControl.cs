@@ -36,7 +36,7 @@ public class CherControl : MonoBehaviour {
 		vertSpeed = -incSpeed*Input.GetAxis ("Vertical");
 		
 		if(Input.GetButton ("Horizontal") || Input.GetButton ("Vertical")){
-			rigidbody.rotation = Quaternion.Lerp (rigidbody.rotation, Quaternion.LookRotation(new Vector3(horzSpeed, rigidbody.velocity.y, -vertSpeed)), Time.deltaTime*10);
+			rigidbody.rotation = Quaternion.Lerp (rigidbody.rotation, Quaternion.LookRotation(Camera.main.worldToCameraMatrix.MultiplyVector(new Vector3(horzSpeed, rigidbody.velocity.y, vertSpeed))), Time.deltaTime*10);
 		}
 		
 		rigidbody.velocity = Camera.main.worldToCameraMatrix.MultiplyVector (new Vector3(horzSpeed, rigidbody.velocity.y, vertSpeed));
