@@ -21,6 +21,7 @@ public class CherControl : MonoBehaviour {
 	public int maxHealth;
 	public int maxPower;
 	public static int hpHit = 0;
+	public static Vector3 playerPos;
 	
 	
 	public int incSpeed;
@@ -31,7 +32,9 @@ public class CherControl : MonoBehaviour {
 	float vertSpeed;
 	
 	// Update is called once per frame
-	void FixedUpdate () {		
+	void FixedUpdate () {
+		playerPos = transform.position;
+		
 		horzSpeed = incSpeed*Input.GetAxis ("Horizontal");
 		vertSpeed = -incSpeed*Input.GetAxis ("Vertical");
 		

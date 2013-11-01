@@ -13,80 +13,48 @@ public class CubexControl : MonoBehaviour {
 	GameObject pickHand;
 	public Vector3 playerLoc;
 	Vector3 handLoc;
-	//public bool punch = false;
-	public float speed = 20;
+	bool isMoving = true;
+	public int speed = 3;
 	
 	public GameObject player;
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		playerLoc = player.transform.position;
-		
-		/*if(punch == true){
-			pickHand.rigidbody.MovePosition(Vector3.MoveTowards (pickHand.rigidbody.position, playerLoc, speed*Time.deltaTime));
-		}else{
-			pickHand.rigidbody.MovePosition(Vector3.MoveTowards (pickHand.rigidbody.position, handLoc, speed*Time.deltaTime));
-			
-			if(pickHand.rigidbody.position == handLoc){
-				//StartCoroutine ("waitAttack");
-				//rigidbody.MovePosition (Vector3.MoveTowards (transform.position, player.transform.position, speed*Time.deltaTime));
+		//CharacterController controller = GetComponent<CharacterController>();
+		if(isMoving){
+		 	transform.LookAt (CherControl.playerPos);
+			if(Vector3.Distance (transform.position, CherControl.playerPos) > 15){
+				rigidbody.velocity = transform.forward*5;
+			}else if(Vector3.Distance (transform.position, CherControl.playerPos) < 7){
+				rigidbody.velocity = -transform.forward*5;
 			}
 		}
-		
-		if(pickHand.rigidbody.position == playerLoc){
-			punch = false;
-		}*/
 	}
 	
-	/*IEnumerator waitAttack(){
-		yield return new WaitForSeconds(2);
+	void endPunch(){
+		Debug.Log ("reset");
+		rigidbody.isKinematic = false;
+		leftHand.animation.Play ("IdleHand");
+		rightHand.animation.Play ("IdleHand");
 		
-		doAttack ();
+		isMoving = true;
+		
+		StartCoroutine ("doAttack");
 	}
-	
-	void doAttack(){
-		int hand = Random.Range (0, 2);
-		print (punch);
-		if(hand == 0){
-			pickHand = leftHand;
-		}else if(hand == 1){
-			pickHand = rightHand;
-		}
-		
-		playerLoc = player.transform.position;
-		handLoc = pickHand.transform.position;
-		punch = true;
-		
-		StartCoroutine ("handOut");
-	}
-	
-	IEnumerator handOut(){
-		yield return new WaitForSeconds(1);
-		
-		punch = false;
-	}*/
 	
 	IEnumerator doAttack(){
-		while(true){
-			yield return new WaitForSeconds(2);
-		//playerLoc = player.transform.position;
+		yield return new WaitForSeconds(2);
+		isMoving = false;
+		rigidbody.isKinematic = true;
+		
+		leftHand.animation.Stop ("IdleHand");
+		rightHand.animation.Stop ("IdleHand");
+		
 		int hand = Random.Range (0, 2);
 		if(hand == 0){
-			//pickHand = leftHand;
-				leftHand.SendMessage ("takeTurn");
+			leftHand.SendMessage ("takeTurn");
 		}else if(hand == 1){
-			//pickHand = rightHand;
-				rightHand.SendMessage("takeTurn");
-		}
-		
-		
-		//handLoc = pickHand.transform.position;
-		//punch = true;
-			
-			yield return new WaitForSeconds(1);
-		//	punch = false;
-		
-		//StartCoroutine ("handOut");
+			rightHand.SendMessage("takeTurn");
 		}
 	}
 }

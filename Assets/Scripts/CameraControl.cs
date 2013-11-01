@@ -14,15 +14,13 @@ public class CameraControl : MonoBehaviour {
 	void FixedUpdate () {
 		Vector3 charPos = camera.WorldToScreenPoint (player.transform.position);
 		Vector3 charVel = camera.worldToCameraMatrix.MultiplyVector(player.rigidbody.velocity);
-		Vector3 charOff = camera.worldToCameraMatrix.MultiplyVector(player.rigidbody.position);
-		Debug.Log(charVel.z);
 		
-		if((charPos.x < Screen.width*0.2 && charVel.x < 0) || (charPos.x > Screen.width*0.8 && charVel.x > 0)){
+		if((charPos.x < Screen.width*0.4 && charVel.x < 0) || (charPos.x > Screen.width*0.6 && charVel.x > 0)){
 			transform.position += transform.right*charVel.x*Time.deltaTime;
 		}
 		
-		/*if((charOff.z < Screen.height*0.2 && charVel.z > 0) || (charPos.z > Screen.height*0.5 && charVel.z < 0)){
+		if((Vector3.Distance (transform.position, player.transform.position) > 50 && charVel.z < 0) || (Vector3.Distance (transform.position, player.transform.position) < 25 && charVel.z > 0)){
 			transform.position += transform.forward*-charVel.z*Time.deltaTime;
-		}*/
+		}
 	}
 }
