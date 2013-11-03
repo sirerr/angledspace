@@ -13,9 +13,47 @@ AnimationClip:
   m_CompressedRotationCurves: []
   m_PositionCurves: []
   m_ScaleCurves: []
-  m_FloatCurves: []
+  m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: .416107535
+        outSlope: .416107535
+        tangentMode: 10
+      - time: 80.0833282
+        value: 33.3232765
+        inSlope: .416107535
+        outSlope: .416107535
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: _MainTex.offset.x
+    path: 
+    classID: 21
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: .221826538
+        outSlope: .221826538
+        tangentMode: 10
+      - time: 90.1333313
+        value: 19.9939651
+        inSlope: .221826538
+        outSlope: .221826538
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: _BumpMap.offset.x
+    path: 
+    classID: 21
+    script: {fileID: 0}
   m_SampleRate: 60
-  m_WrapMode: 0
+  m_WrapMode: 2
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
@@ -34,6 +72,44 @@ AnimationClip:
     m_KeepOriginalPositionXZ: 0
     m_HeightFromFeet: 0
     m_Mirror: 0
-  m_EditorCurves: []
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: .416107535
+        outSlope: .416107535
+        tangentMode: 10
+      - time: 80.0833282
+        value: 33.3232765
+        inSlope: .416107535
+        outSlope: .416107535
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: _MainTex.offset.x
+    path: 
+    classID: 21
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: .221826538
+        outSlope: .221826538
+        tangentMode: 10
+      - time: 90.1333313
+        value: 19.9939651
+        inSlope: .221826538
+        outSlope: .221826538
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: _BumpMap.offset.x
+    path: 
+    classID: 21
+    script: {fileID: 0}
   m_EulerEditorCurves: []
   m_Events: []
