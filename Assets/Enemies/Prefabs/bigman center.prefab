@@ -72,7 +72,7 @@ GameObject:
   - 4: {fileID: 400008}
   m_Layer: 0
   m_Name: bigman center
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.21364127e-10, y: -8.45972536e-09, z: -.00575649831}
+  m_LocalPosition: {x: 2.50663357e-09, y: -8.89621532e-09, z: -.00575649925}
   m_LocalScale: {x: 1.44256163, y: 1.44256175, z: 1.44256163}
   m_Children: []
   m_Father: {fileID: 400004}
@@ -288,8 +288,8 @@ SkinnedMeshRenderer:
   - {fileID: 400006}
   m_RootBone: {fileID: 400000}
   m_AABB:
-    m_Center: {x: -.0135844247, y: 1.39698386e-09, z: .000567504205}
-    m_Extent: {x: .0144214435, y: .00973555818, z: .0103030549}
+    m_Center: {x: -.0135965552, y: 1.86264515e-09, z: .000567504205}
+    m_Extent: {x: .014409313, y: .00973555818, z: .0103030549}
   m_DirtyAABB: 0
 --- !u!198 &19800000
 ParticleSystem:
@@ -297,7 +297,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
-  lengthInSec: 1
+  lengthInSec: .100000001
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -341,7 +341,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 5
+      scalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -548,7 +548,7 @@ ParticleSystem:
     boxZ: 1
     placementMode: 2
     m_Mesh: {fileID: 4300002, guid: bd91cd41ae848a44b93d4946c4a21d01, type: 3}
-    randomDirection: 0
+    randomDirection: 1
   EmissionModule:
     enabled: 1
     m_Type: 0
@@ -939,7 +939,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     y:
-      scalar: 0
+      scalar: 3.94000006
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1004,7 +1004,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    inWorldSpace: 0
+    inWorldSpace: 1
     randomizePerFrame: 0
   ExternalForcesModule:
     enabled: 0
@@ -1111,7 +1111,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     magnitude:
-      scalar: 1
+      scalar: 5
       maxCurve:
         serializedVersion: 2
         m_Curve:
