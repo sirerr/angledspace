@@ -23,7 +23,7 @@ public class CubexControl : MonoBehaviour {
 		//CharacterController controller = GetComponent<CharacterController>();
 		if(isMoving){
 		 	transform.LookAt (CherControl.playerPos);
-			if(Vector3.Distance (transform.position, CherControl.playerPos) > 15){
+			if(Vector3.Distance (rigidbody.position, CherControl.playerPos) > 15){
 				rigidbody.velocity = transform.forward*5;
 			}else if(Vector3.Distance (transform.position, CherControl.playerPos) < 7){
 				rigidbody.velocity = -transform.forward*5;
