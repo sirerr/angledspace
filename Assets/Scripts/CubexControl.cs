@@ -11,16 +11,14 @@ public class CubexControl : MonoBehaviour {
 	public GameObject leftHand;
 	public GameObject rightHand;
 	GameObject pickHand;
-	public Vector3 playerLoc;
 	Vector3 handLoc;
 	bool isMoving = true;
 	public int speed = 3;
-	
-	public GameObject player;
+	public int hitSpeed;
+	public int damage;
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		//CharacterController controller = GetComponent<CharacterController>();
 		if(isMoving){
 		 	transform.LookAt (CherControl.playerPos);
 			if(Vector3.Distance (rigidbody.position, CherControl.playerPos) > 15){

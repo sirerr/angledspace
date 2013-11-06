@@ -13,6 +13,10 @@ public class TankControl : MonoBehaviour {
 	public GameObject topBullet;
 	public GameObject bulletSpawn;
 	public GameObject topSpawn;
+	public int bulletDam;
+	public int bulletSpeed;
+	public int topDam;
+	public int topSpeed;
 
 	bool inRange = false;
 	
@@ -23,7 +27,6 @@ public class TankControl : MonoBehaviour {
 			animation.Stop ("TankMove");
 			StartCoroutine ("topShot");
 		}else if(inRange){
-			Debug.Log ("print");
 			tankTop.transform.LookAt (CherControl.playerPos);
 		}
 	}
@@ -32,7 +35,10 @@ public class TankControl : MonoBehaviour {
 		yield return new WaitForSeconds(5f);
 		
 		while(!inRange){
-			Instantiate(bullet, bulletSpawn.transform.position, transform.rotation);
+			GameObject newBull = Instantiate(bullet, bulletSpawn.transform.position, transform.rotation) as GameObject;
+			newBull.GetComponent<BulletControl>().speed = 20;
+			newBull.GetComponent<BulletControl>().damage = 10;
+			
 			yield return new WaitForSeconds(5f);
 		}
 	}
@@ -42,7 +48,10 @@ public class TankControl : MonoBehaviour {
 			yield return new WaitForSeconds(1f);
 		
 			for(int i=0; i<3; i++){
-				Instantiate (topBullet, topSpawn.transform.position, tankTop.transform.rotation);
+				GameObject newBull = Instantiate (topBullet, topSpawn.transform.position, tankTop.transform.rotation) as GameObject;
+				
+				newBull.GetComponent<BulletControl>().speed = 30;
+				newBull.GetComponent<BulletControl>().damage = 5;
 				yield return new WaitForSeconds(0.25f);
 			}
 		}

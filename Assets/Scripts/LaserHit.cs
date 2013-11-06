@@ -5,11 +5,10 @@ public class LaserHit : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//playerPos = GetComponent<CameraControl>().player.transform.position;//GetComponent<DiamonControl>().player.transform.position;		
 	}
 	
 	public int speed;
-	public GameObject player;
+	public int damage;
 	public Vector3 playerPos;
 	
 	// Update is called once per frame
@@ -24,7 +23,7 @@ public class LaserHit : MonoBehaviour {
 	void OnTriggerEnter(Collider target){
 		Debug.Log ("hit stuff");
 		if(target.tag == "Player"){
-			target.SendMessage ("takeHit");
+			target.SendMessage ("takeHit", damage);
 		}
 		
 		Destroy (gameObject);

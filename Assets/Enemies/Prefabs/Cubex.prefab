@@ -563,9 +563,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftHand: {fileID: 100004}
   rightHand: {fileID: 100008}
-  playerLoc: {x: 0, y: 0, z: 0}
   speed: 3
-  player: {fileID: 0}
+  hitSpeed: 20
+  damage: 10
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -577,7 +577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8edc2cf1df64aa74f8875b3fe06ed8c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -589,7 +588,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8edc2cf1df64aa74f8875b3fe06ed8c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -613,7 +611,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8edc2cf1df64aa74f8875b3fe06ed8c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -625,7 +622,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8edc2cf1df64aa74f8875b3fe06ed8c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

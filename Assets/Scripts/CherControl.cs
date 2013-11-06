@@ -22,6 +22,8 @@ public class CherControl : MonoBehaviour {
 	public int maxPower;
 	public static int hpHit = 0;
 	public static Vector3 playerPos;
+	public Texture hpBip;
+	public Texture halfBip;
 	
 	
 	public int incSpeed;
@@ -61,11 +63,19 @@ public class CherControl : MonoBehaviour {
 	}
 		
 	void OnGUI(){
-		GUI.Box (new Rect(20, 20, 100, 100), health.ToString ());
+		//GUI.Box (new Rect(20, 20, 200, 40), health.ToString ());
+		
+		for(int i=0; i<(health/20f); i++){
+			if(Mathf.Abs (i-(health/20f)) <= 0.5){
+				GUI.DrawTexture (new Rect(20+((int)i*35), 20, 30, 30), halfBip);
+			}else{
+				GUI.DrawTexture (new Rect(20+((int)i*35), 20, 30, 30), hpBip);
+			}
+		}
 	}
 	
-	void takeHit(){
-		health -= 1;
+	void takeHit(int dam){
+		health -= dam;
 		
 		if(health <= 0){
 			Destroy (this.gameObject);

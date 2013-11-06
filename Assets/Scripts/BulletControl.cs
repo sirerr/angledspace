@@ -9,6 +9,7 @@ public class BulletControl : MonoBehaviour {
 	}
 	
 	public int speed;
+	public int damage;
 	
 	// Update is called once per frame
 	void Update () {
@@ -18,7 +19,7 @@ public class BulletControl : MonoBehaviour {
 	void OnTriggerEnter(Collider target){
 		if(target.tag == "Player"){
 			Destroy(gameObject);
-			target.SendMessage ("takeHit");
+			target.SendMessage ("takeHit", damage);
 		}
 	}
 }

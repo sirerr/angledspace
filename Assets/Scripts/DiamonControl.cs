@@ -8,8 +8,9 @@ public class DiamonControl : MonoBehaviour {
 		StartCoroutine ("moveDiamond");
 	}
 	
-	public GameObject player;
 	public int speed;
+	public int lasSpeed;
+	public int lasDam;
 	public GameObject laser;
 	bool isMove = false;
 	Vector3 movePos;
@@ -17,13 +18,15 @@ public class DiamonControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		playerPos = player.transform.position;
+		playerPos = CherControl.playerPos;
 		
 		if(isMove){
 			this.rigidbody.MovePosition (Vector3.MoveTowards (transform.position, movePos,  speed*Time.deltaTime));
 			if(this.rigidbody.position == movePos){
 				GameObject lasBlast = Instantiate (laser, transform.position, Quaternion.LookRotation (playerPos)) as GameObject;
-				lasBlast.GetComponent<LaserHit>().playerPos = player.transform.position;
+				lasBlast.GetComponent<LaserHit>().playerPos = CherControl.playerPos;
+				lasBlast.GetComponent<LaserHit>().speed = lasSpeed;
+				lasBlast.GetComponent<LaserHit>().damage = lasDam;
 				isMove = false;
 				StartCoroutine("moveDiamond");
 			}
@@ -34,7 +37,7 @@ public class DiamonControl : MonoBehaviour {
 		yield return new WaitForSeconds(1.5f);
 			
 		float moveX = Random.Range (5, 11);
-		float moveY = Random.Range (3, 9);
+		float moveY = Random.Range (0, 2);
 		float moveZ = Random.Range (5, 11);
 		
 		if(Random.Range (0, 2) == 0){

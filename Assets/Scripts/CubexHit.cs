@@ -12,10 +12,11 @@ public class CubexHit : MonoBehaviour {
 	bool isDone = true;
 	Vector3 playerLoc;
 	Vector3 baseLoc;
-	public int speed = 20;
+	//public int speed = 20;
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		int speed = transform.parent.parent.GetComponent <CubexControl>().hitSpeed;
 		if(punch){
 			rigidbody.MovePosition (Vector3.MoveTowards (rigidbody.position, playerLoc, speed*Time.deltaTime));
 				if(rigidbody.position == playerLoc){
@@ -44,8 +45,9 @@ public class CubexHit : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter(Collider target){
+		CubexControl control = transform.parent.parent.GetComponent<CubexControl>();
 		if(target.tag == "Player" && punch){
-			target.SendMessage ("takeHit");
+			target.SendMessage ("takeHit", control.damage);
 			punch = false;
 		}
 	}
