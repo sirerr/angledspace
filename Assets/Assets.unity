@@ -26310,7 +26310,6 @@ GameObject:
   - 114: {fileID: 1627703063}
   - 54: {fileID: 1627703062}
   - 135: {fileID: 1627703064}
-  - 114: {fileID: 1627703065}
   m_Layer: 0
   m_Name: Player Controller
   m_TagString: Player
@@ -26384,119 +26383,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1627703065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400008, guid: c518dd1c579c5964bb39b8e7766a9367,
-    type: 2}
-  m_PrefabInternal: {fileID: 288226755}
-  m_GameObject: {fileID: 1627703060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fsm:
-    usedInTemplate: {fileID: 0}
-    name: FSM
-    startState: Get axis vector
-    states:
-    - name: Get axis vector
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 50
-        y: 100
-        width: 120
-        height: 16
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions: []
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.GetAxisVector
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 04a95048
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Horizontal
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Vertical
-        fsmObjectParams: []
-        fsmVarParams: []
-        byteData: 0000803f000000000000000000000000000000000001706c6179657220766563746f72330000000001
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 12000000120000000f00000007000000130000001c0000000f000000
-        paramName:
-        - horizontalAxis
-        - verticalAxis
-        - multiplier
-        - mapToPlane
-        - relativeTo
-        - storeVector
-        - storeMagnitude
-        paramDataPos: 00000000010000000000000005000000000000000900000024000000
-        paramByteDataSize: 00000000000000000500000004000000000000001b00000005000000
-    events: []
-    globalTransitions: []
-    variables:
-      floatVariables: []
-      intVariables: []
-      boolVariables: []
-      stringVariables: []
-      vector2Variables: []
-      vector3Variables: []
-      colorVariables: []
-      rectVariables: []
-      quaternionVariables: []
-      gameObjectVariables: []
-      objectVariables: []
-      materialVariables: []
-      textureVariables: []
-    description: 
-    docUrl: 
-    showStateLabel: 1
-    maxLoopCount: 0
-    watermark: 
-    version: 0
-    ExposedEvents: []
-    RestartOnEnable: 1
-    EnableDebugFlow: 0
-    StepFrame: 0
-    activeStateName: 
-  fsmTemplate: {fileID: 0}
 --- !u!1 &1638566152
 GameObject:
   m_ObjectHideFlags: 0
@@ -35382,7 +35268,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    cnt0: 1000
+    cnt0: 700
     cnt1: 30
     cnt2: 30
     cnt3: 30
