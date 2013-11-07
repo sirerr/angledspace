@@ -30,7 +30,6 @@ public class CubexControl : MonoBehaviour {
 	}
 	
 	void endPunch(){
-		Debug.Log ("reset");
 		rigidbody.isKinematic = false;
 		leftHand.animation.Play ("IdleHand");
 		rightHand.animation.Play ("IdleHand");

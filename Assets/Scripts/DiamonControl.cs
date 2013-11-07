@@ -52,6 +52,8 @@ public class DiamonControl : MonoBehaviour {
 			moveZ = playerPos.z - moveZ;
 		}
 		
+		moveY += playerPos.y;
+		
 		movePos = new Vector3(moveX, moveY, moveZ);
 		isMove = true;
 	}

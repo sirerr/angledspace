@@ -14,6 +14,7 @@ public class CherControl : MonoBehaviour {
 	public GameObject dude;
 	public GameObject weapon;
 	public GameObject weapTrigger;
+	public GameObject spawnPoint;
 	bool ariel;
 	float vertMove;
 	int health;
@@ -78,7 +79,8 @@ public class CherControl : MonoBehaviour {
 		health -= dam;
 		
 		if(health <= 0){
-			Destroy (this.gameObject);
+			health = maxHealth;
+			rigidbody.position = spawnPoint.transform.position;
 		}
 	}
 }

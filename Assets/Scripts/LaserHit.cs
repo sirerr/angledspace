@@ -21,7 +21,6 @@ public class LaserHit : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter(Collider target){
-		Debug.Log ("hit stuff");
 		if(target.tag == "Player"){
 			target.SendMessage ("takeHit", damage);
 		}
