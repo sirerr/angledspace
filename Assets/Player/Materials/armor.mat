@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: floor_level
+  m_Name: armor
   m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_SavedProperties:
@@ -24,4 +24,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .470588207, g: .456999063, b: .41522488, a: 1}
+        second: {r: 0, g: .103699997, b: .273799986, a: 1}
