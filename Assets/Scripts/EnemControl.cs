@@ -9,27 +9,26 @@ public class EnemControl : MonoBehaviour {
 	}
 	
 	public int health;
+	public GameObject charBody;
+	public ParticleSystem onDeath;
+	public ParticleSystem onHit;
 	
 	// Update is called once per frame
 	void Update () {
-	
 	}
-	
-	/*void OnTriggerEnter(Collider target){
-		if(target.tag == "PWeapon"){
-			health--;
-			
-			if(health <= 0){
-				Destroy (this.gameObject);
-			}
-		}
-	}*/
 	
 	void takeHit(){
 		health--;
-		
 		if(health <= 0){
-			Destroy (this.gameObject);
+			Destroy (charBody);
+			StartCoroutine ("deathPart");
 		}
+	}
+	
+	IEnumerator deathPart(){
+		onDeath.Play();
+		yield return new WaitForSeconds(onDeath.duration);
+		onDeath.Stop();
+		Destroy (this.gameObject);
 	}
 }

@@ -14,13 +14,15 @@ public class CameraControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		Vector3 charPos = camera.WorldToScreenPoint (player.transform.position);
+		Vector3 charPos = camera.WorldToScreenPoint (CherControl.playerPos);
 		Vector3 charVel = camera.worldToCameraMatrix.MultiplyVector(player.rigidbody.velocity);
 		
 		if(charPos.x < 0 || charPos.x > Screen.width || charPos.y < 0 || charPos.y > Screen.height ||
-			Vector3.Distance (transform.position, player.transform.position) < 0 || Vector3.Distance (transform.position, player.transform.position) > 50){
-			resetPos = camera.WorldToScreenPoint (CherControl.playerPos);
+			Vector3.Distance (transform.position, player.transform.position) < 0 || Vector3.Distance (transform.position, player.transform.position) > 100){
+			//resetPos = camera.WorldToScreenPoint (CherControl.playerPos);
 			//resetPos.z -= 50;
+			resetPos = CherControl.playerPos;
+			resetPos.x += 50;
 			
 		
 			//offScreen = true;

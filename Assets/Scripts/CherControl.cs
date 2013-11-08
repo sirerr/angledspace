@@ -79,8 +79,10 @@ public class CherControl : MonoBehaviour {
 		health -= dam;
 		
 		if(health <= 0){
+			Camera.main.transform.parent = transform;
 			health = maxHealth;
 			rigidbody.position = spawnPoint.transform.position;
+			Camera.main.transform.parent = null;
 		}
 	}
 }
