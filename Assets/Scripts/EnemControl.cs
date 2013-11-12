@@ -20,15 +20,8 @@ public class EnemControl : MonoBehaviour {
 	void takeHit(){
 		health--;
 		if(health <= 0){
-			Destroy (charBody);
-			StartCoroutine ("deathPart");
+			Instantiate (onDeath, transform.position, Quaternion.identity);
+			Destroy (gameObject);
 		}
-	}
-	
-	IEnumerator deathPart(){
-		onDeath.Play();
-		yield return new WaitForSeconds(onDeath.duration);
-		onDeath.Stop();
-		Destroy (this.gameObject);
 	}
 }
