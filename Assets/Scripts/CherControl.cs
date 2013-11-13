@@ -15,6 +15,9 @@ public class CherControl : MonoBehaviour {
 	public GameObject weapon;
 	public GameObject weapTrigger;
 	public GameObject spawnPoint;
+	public ParticleSystem sparks;
+	public ParticleSystem dashes;
+	
 	bool ariel;
 	float vertMove;
 	int health;
@@ -25,7 +28,9 @@ public class CherControl : MonoBehaviour {
 	public static Vector3 playerPos;
 	public Texture hpBip;
 	public Texture halfBip;
-	
+	bool isSpark;
+	bool isJump;
+	bool isDash;
 	
 	public int incSpeed;
 	public int maxSpeed;
@@ -37,9 +42,14 @@ public class CherControl : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		playerPos = transform.position;
+		int realSpeed = incSpeed;
 		
-		horzSpeed = incSpeed*Input.GetAxis ("Horizontal");
-		vertSpeed = -incSpeed*Input.GetAxis ("Vertical");
+		if(isDash){
+			realSpeed = incSpeed*2;
+		}
+		
+		horzSpeed = realSpeed*Input.GetAxis ("Horizontal");
+		vertSpeed = -realSpeed*Input.GetAxis ("Vertical");
 		
 		if(Input.GetButton ("Horizontal") || Input.GetButton ("Vertical")){
 			rigidbody.rotation = Quaternion.Lerp (rigidbody.rotation, Quaternion.LookRotation(Camera.main.worldToCameraMatrix.MultiplyVector(new Vector3(horzSpeed, rigidbody.velocity.y, vertSpeed))), Time.deltaTime*10);
@@ -47,6 +57,13 @@ public class CherControl : MonoBehaviour {
 		
 		rigidbody.velocity = Camera.main.worldToCameraMatrix.MultiplyVector (new Vector3(horzSpeed, rigidbody.velocity.y, vertSpeed));
 		dude.transform.Rotate(new Vector3(rigidbody.velocity.z, 0, -rigidbody.velocity.x), Space.World);
+		
+		if(!isSpark && (vertSpeed >= incSpeed-1 || horzSpeed >= incSpeed-1)){
+			sparks.Play ();
+			isSpark = true;
+		}else if(vertSpeed < incSpeed-2 && horzSpeed < incSpeed-2){
+			sparks.Stop ();
+		}
 		
 		if(Input.GetButton ("Fire1")){
 			weapon.animation.Play ("Attack");
@@ -59,7 +76,10 @@ public class CherControl : MonoBehaviour {
 		}
 		
 		if(Input.GetButtonDown ("Jump")){
-			rigidbody.velocity = Vector3.up*jumpPow;
+			//rigidbody.velocity = Vector3.up*jumpPow;
+			isDash = true;
+			dashes.Play ();
+			StartCoroutine ("dashCount");
 		}
 	}
 		
@@ -73,6 +93,12 @@ public class CherControl : MonoBehaviour {
 				GUI.DrawTexture (new Rect(20+((int)i*35), 20, 30, 30), hpBip);
 			}
 		}
+	}
+	
+	IEnumerator dashCount(){
+		yield return new WaitForSeconds(2);
+		
+		isDash = false;
 	}
 	
 	void takeHit(int dam){

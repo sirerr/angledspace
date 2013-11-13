@@ -20,7 +20,7 @@ public class CubexControl : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		if(isMoving){
-		 	transform.LookAt (CherControl.playerPos);
+			rigidbody.rotation = Quaternion.LookRotation (new Vector3(CherControl.playerPos.x, 0, CherControl.playerPos.z));
 			if(Vector3.Distance (rigidbody.position, CherControl.playerPos) > 15){
 				rigidbody.velocity = transform.forward*5;
 			}else if(Vector3.Distance (transform.position, CherControl.playerPos) < 7){

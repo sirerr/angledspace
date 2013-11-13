@@ -37,7 +37,8 @@ public class DiamonControl : MonoBehaviour {
 		yield return new WaitForSeconds(1.5f);
 			
 		float moveX = Random.Range (5, 11);
-		float moveY = Random.Range (0, 2);
+		//float moveY = Random.Range (0, 2);
+		float moveY = 0;
 		float moveZ = Random.Range (5, 11);
 		
 		if(Random.Range (0, 2) == 0){
