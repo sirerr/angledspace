@@ -130,6 +130,7 @@ GameObject:
   - 4: {fileID: 400014}
   - 198: {fileID: 19800002}
   - 199: {fileID: 19900002}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: diamond death PS
   m_TagString: Untagged
@@ -182,7 +183,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 135.69043, y: -6.28685951, z: -241.404297}
+  m_LocalPosition: {x: 135.69043, y: -6.28685951, z: -208.656509}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -228,7 +229,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100014}
   m_LocalRotation: {x: -1.06154778e-06, y: 1.02016963e-06, z: -9.71236773e-07, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 3.13635445, z: 0}
   m_LocalScale: {x: 83.2779007, y: 98.2763443, z: 15.326828}
   m_Children: []
   m_Father: {fileID: 400006}
@@ -335,6 +336,17 @@ Animation:
   m_UserAABB:
     m_Center: {x: 0, y: 1.39698386e-09, z: -.0399999991}
     m_Extent: {x: .0155563494, y: .00283053052, z: .0233345255}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3278cc01dafdadf4a83e3ddad11c4b84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -377,7 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  charBody: {fileID: 100002}
+  charBody: {fileID: 100006}
   onDeath: {fileID: 19800000, guid: ee3d9b76b5d88f641821a1567c18ffd6, type: 2}
   onHit: {fileID: 19800000, guid: 49de5d324e8524646b61fc8f94408ba2, type: 2}
 --- !u!114 &11400008
