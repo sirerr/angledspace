@@ -183,7 +183,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 135.69043, y: -6.28685951, z: -208.656509}
+  m_LocalPosition: {x: 148.625793, y: -6.28685951, z: -208.656509}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -312,7 +312,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 3, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 3, z: 0}
 --- !u!111 &11100000
 Animation:
   m_ObjectHideFlags: 1
@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  charBody: {fileID: 100006}
+  charBody: {fileID: 100002}
   onDeath: {fileID: 19800000, guid: ee3d9b76b5d88f641821a1567c18ffd6, type: 2}
   onHit: {fileID: 19800000, guid: 49de5d324e8524646b61fc8f94408ba2, type: 2}
 --- !u!114 &11400008
@@ -404,9 +404,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  lasSpeed: 30
+  lasSpeed: 40
   lasDam: 10
-  laser: {fileID: 100000, guid: c25d17f7a3036ff46bd47a3354c11dbd, type: 2}
+  laser: {fileID: 100000, guid: e16b3b84fa91e0e49a946763fc024d08, type: 2}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
