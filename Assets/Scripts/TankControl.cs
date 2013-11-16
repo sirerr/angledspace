@@ -48,7 +48,7 @@ public class TankControl : MonoBehaviour {
 			yield return new WaitForSeconds(1f);
 		
 			for(int i=0; i<3; i++){
-				GameObject newBull = Instantiate (topBullet, topSpawn.transform.position, tankTop.transform.rotation) as GameObject;
+				GameObject newBull = Instantiate (topBullet, topSpawn.transform.position, topSpawn.transform.rotation) as GameObject;
 				
 				newBull.GetComponent<BulletControl>().speed = 30;
 				newBull.GetComponent<BulletControl>().damage = 5;
