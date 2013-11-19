@@ -18,8 +18,9 @@ public class BulletControl : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider target){
 		if(target.tag == "Player"){
-			Destroy(gameObject);
 			target.SendMessage ("takeHit", damage);
 		}
+
+		Destroy(gameObject);
 	}
 }

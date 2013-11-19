@@ -51,7 +51,7 @@ public class CherControl : MonoBehaviour {
 		horzSpeed = realSpeed*Input.GetAxis ("Horizontal");
 		vertSpeed = -realSpeed*Input.GetAxis ("Vertical");
 		
-		if(Input.GetButton ("Horizontal") || Input.GetButton ("Vertical")){
+		if(Input.GetAxis ("Horizontal") != 0 || Input.GetAxis ("Vertical") != 0){
 			rigidbody.rotation = Quaternion.Lerp (rigidbody.rotation, Quaternion.LookRotation(Camera.main.worldToCameraMatrix.MultiplyVector(new Vector3(horzSpeed, rigidbody.velocity.y, vertSpeed))), Time.deltaTime*10);
 		}
 		

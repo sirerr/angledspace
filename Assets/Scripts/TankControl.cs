@@ -27,7 +27,7 @@ public class TankControl : MonoBehaviour {
 			animation.Stop ("TankMove");
 			StartCoroutine ("topShot");
 		}else if(inRange){
-			tankTop.transform.LookAt (CherControl.playerPos);
+			tankTop.transform.LookAt (new Vector3(CherControl.playerPos.x, CherControl.playerPos.y-1, CherControl.playerPos.z));
 		}
 	}
 	

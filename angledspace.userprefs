@@ -1,16 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TankControl.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CubexControl.cs">
     <Files>
-      <File FileName="Assets\Scripts\TankControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TankControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PartDeath.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CameraControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CubexControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TankControl.cs" Line="32" Column="3" />
+      <File FileName="Assets\Scripts\BigmanControl.cs" Line="42" Column="20" />
+      <File FileName="Assets\Scripts\CubexControl.cs" Line="23" Column="50" />
+      <File FileName="Assets\Scripts\PartDeath.cs" Line="17" Column="60" />
+      <File FileName="Assets\Scripts\CherControl.cs" Line="48" Column="27" />
+      <File FileName="Assets\Scripts\BulletControl.cs" Line="23" Column="3" />
       <File FileName="Assets\Scripts\CubexHit.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CherControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\EnemControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\WeapHit.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

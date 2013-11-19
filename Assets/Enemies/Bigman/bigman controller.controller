@@ -8,30 +8,26 @@ AnimatorController:
   m_Name: bigman controller
   serializedVersion: 2
   m_AnimatorParameters:
-  - m_Name: Close Enough to shoot
+  - m_Name: canShoot
     m_Type: 4
-    m_DefaultVector: {x: 0, y: 0, z: 0}
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: Close Enough to Ram
+  - m_Name: canCharge
     m_Type: 4
-    m_DefaultVector: {x: 0, y: 0, z: 0}
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: Lower Arm
+  - m_Name: lowerArm
     m_Type: 4
-    m_DefaultVector: {x: 0, y: 0, z: 0}
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: Stop Ram
+  - m_Name: stopCharge
     m_Type: 4
-    m_DefaultVector: {x: 0, y: 0, z: 0}
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -60,7 +56,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Close Enough to shoot
+    m_ConditionEvent: canShoot
     m_EventTreshold: 0
     m_ExitTime: .899999976
   m_Atomic: 1
@@ -96,7 +92,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Close Enough to Ram
+    m_ConditionEvent: canCharge
     m_EventTreshold: 0
     m_ExitTime: .899999976
   m_Atomic: 1
@@ -114,7 +110,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: Close Enough to shoot
+    m_ConditionEvent: 
     m_EventTreshold: 0
     m_ExitTime: 0
   m_Atomic: 1
@@ -132,7 +128,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Stop Ram
+    m_ConditionEvent: stopCharge
     m_EventTreshold: 0
     m_ExitTime: 0
   m_Atomic: 1
@@ -150,7 +146,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Lower Arm
+    m_ConditionEvent: lowerArm
     m_EventTreshold: 0
     m_ExitTime: 0
   m_Atomic: 1
@@ -168,7 +164,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: Lower Arm
+    m_ConditionEvent: lowerArm
     m_EventTreshold: 0
     m_ExitTime: 0
   m_Atomic: 1
@@ -317,34 +313,34 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110239167}
+      first: {fileID: 110200000}
       second:
-      - {fileID: 110185654}
-    data:
-      first: {fileID: 110248742}
-      second:
-      - {fileID: 110152047}
-    data:
-      first: {fileID: 110208760}
-      second:
-      - {fileID: 110104540}
-    data:
-      first: {fileID: 110258143}
-      second:
-      - {fileID: 110143659}
-    data:
-      first: {fileID: 110200500}
-      second:
-      - {fileID: 110179739}
+      - {fileID: 110100000}
+      - {fileID: 110139613}
     data:
       first: {fileID: 110241851}
       second:
       - {fileID: 110181017}
     data:
-      first: {fileID: 110200000}
+      first: {fileID: 110200500}
       second:
-      - {fileID: 110100000}
-      - {fileID: 110139613}
+      - {fileID: 110179739}
+    data:
+      first: {fileID: 110258143}
+      second:
+      - {fileID: 110143659}
+    data:
+      first: {fileID: 110208760}
+      second:
+      - {fileID: 110104540}
+    data:
+      first: {fileID: 110248742}
+      second:
+      - {fileID: 110152047}
+    data:
+      first: {fileID: 110239167}
+      second:
+      - {fileID: 110185654}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 48, y: -72, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
