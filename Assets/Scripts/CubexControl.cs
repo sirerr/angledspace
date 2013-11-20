@@ -19,13 +19,15 @@ public class CubexControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		Vector3 charPos = new Vector3(CherControl.playerPos.x, transform.position.y, CherControl.playerPos.z);
+		Vector3 enemPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 		if(isMoving){
-			rigidbody.rotation = Quaternion.LookRotation (new Vector3(CherControl.playerPos.x, 0, CherControl.playerPos.z));
-			//transform.LookAt (new Vector3(0, 0, 0));
+			//rigidbody.rotation = Quaternion.LookRotation (new Vector3(CherControl.playerPos.x, 0, CherControl.playerPos.z));
+			transform.LookAt (charPos);
 			if(Vector3.Distance (rigidbody.position, CherControl.playerPos) > 15){
-				rigidbody.velocity = transform.forward*5;
+				rigidbody.velocity = (charPos-enemPos)*Time.deltaTime*5;
 			}else if(Vector3.Distance (transform.position, CherControl.playerPos) < 7){
-				rigidbody.velocity = -transform.forward*5;
+				rigidbody.velocity = (enemPos - charPos)*Time.deltaTime*5;
 			}
 		}
 	}

@@ -41,7 +41,7 @@ public class CherControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		playerPos = transform.position;
+		playerPos = rigidbody.position;
 		int realSpeed = incSpeed;
 		
 		if(isDash){
