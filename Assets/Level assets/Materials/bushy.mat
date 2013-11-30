@@ -9,6 +9,7 @@ Material:
   m_Name: bushy
   m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -24,4 +25,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .18555364, g: .573529422, b: .193943635, a: 1}
+        second: {r: .0601751879, g: .389705896, b: .0673013031, a: .501960814}
