@@ -15,6 +15,7 @@ public class CherControl : MonoBehaviour {
 	public GameObject weapon;
 	public GameObject weapTrigger;
 	public GameObject spawnPoint;
+	public Camera moveRef;
 	public ParticleSystem sparks;
 	public ParticleSystem dashes;
 	
@@ -52,10 +53,10 @@ public class CherControl : MonoBehaviour {
 		vertSpeed = -realSpeed*Input.GetAxis ("Vertical");
 		
 		if(Input.GetAxis ("Horizontal") != 0 || Input.GetAxis ("Vertical") != 0){
-			rigidbody.rotation = Quaternion.Lerp (rigidbody.rotation, Quaternion.LookRotation(Camera.main.worldToCameraMatrix.MultiplyVector(new Vector3(horzSpeed, rigidbody.velocity.y, vertSpeed))), Time.deltaTime*10);
+			rigidbody.rotation = Quaternion.Lerp (rigidbody.rotation, Quaternion.LookRotation(moveRef.worldToCameraMatrix.MultiplyVector(new Vector3(horzSpeed, rigidbody.velocity.y, vertSpeed))), Time.deltaTime*10);
 		}
 		
-		rigidbody.velocity = Camera.main.worldToCameraMatrix.MultiplyVector (new Vector3(horzSpeed, rigidbody.velocity.y, vertSpeed));
+		rigidbody.velocity = moveRef.worldToCameraMatrix.MultiplyVector (new Vector3(horzSpeed, rigidbody.velocity.y, vertSpeed));
 		dude.transform.Rotate(new Vector3(rigidbody.velocity.z, 0, -rigidbody.velocity.x), Space.World);
 		
 		if(!isSpark && (vertSpeed >= incSpeed-1 || horzSpeed >= incSpeed-1)){
@@ -76,7 +77,10 @@ public class CherControl : MonoBehaviour {
 		}
 		
 		if(Input.GetButtonDown ("Jump")){
-			//rigidbody.velocity = Vector3.up*jumpPow;
+			rigidbody.velocity = Vector3.up*jumpPow;
+		}
+
+		if(Input.GetButton ("Dash")){
 			isDash = true;
 			dashes.Play ();
 			StartCoroutine ("dashCount");
@@ -105,10 +109,10 @@ public class CherControl : MonoBehaviour {
 		health -= dam;
 		
 		if(health <= 0){
-			Camera.main.transform.parent = transform;
+			moveRef.transform.parent = transform;
 			health = maxHealth;
 			rigidbody.position = spawnPoint.transform.position;
-			Camera.main.transform.parent = null;
+			moveRef.transform.parent = null;
 		}
 	}
 }

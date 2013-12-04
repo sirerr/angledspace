@@ -1,8 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\L1-19\L1-19\X1-19 Unity\Assets\Scripts\RotateShip.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CherControl.cs">
     <Files>
-      <File FileName="..\L1-19\L1-19\X1-19 Unity\Assets\Scripts\RotateShip.cs" Line="54" Column="52" />
+      <File FileName="Assets\Scripts\CherControl.cs" Line="80" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
