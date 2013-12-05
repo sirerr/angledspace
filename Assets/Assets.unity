@@ -12752,6 +12752,10 @@ Prefab:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 13134655}
+    - target: {fileID: 11400002, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
+      propertyPath: moveRef
+      value: 
+      objectReference: {fileID: 1979509177}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
   m_RootGameObject: {fileID: 1627703060}
@@ -18486,7 +18490,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: acac1f35780380b4880741914e4bcc8d, type: 2}
+  - {fileID: 2100000, guid: c73ffa78612d413499bc4993a55fd928, type: 2}
   - {fileID: 2100000, guid: ce8e5ee32b27bcb429e85fda05f9e417, type: 2}
   - {fileID: 2100000, guid: ef3a084b4be9df24e928d56603fabb4e, type: 2}
   - {fileID: 2100000, guid: e8393b85500f7534f8bdcd786a1226ff, type: 2}
@@ -18971,7 +18975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previewOnGUI: 1
   enableGUILayout: 1
-  drawStateLabels: 0
+  drawStateLabels: 1
   GUITextureStateLabels: 1
   GUITextStateLabels: 1
   filterLabelsWithDistance: 0
@@ -30000,6 +30004,7 @@ MonoBehaviour:
   weapon: {fileID: 1503569658}
   weapTrigger: {fileID: 2084610844}
   spawnPoint: {fileID: 13134655}
+  moveRef: {fileID: 1979509177}
   sparks: {fileID: 1023619110}
   dashes: {fileID: 758139086}
   maxHealth: 1000
@@ -33088,10 +33093,14 @@ Prefab:
     - target: {fileID: 2300000, guid: 8653e59b10a176548bdd8fe46f28771c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: acac1f35780380b4880741914e4bcc8d, type: 2}
+      objectReference: {fileID: 2100000, guid: c73ffa78612d413499bc4993a55fd928, type: 2}
     - target: {fileID: 100000, guid: 8653e59b10a176548bdd8fe46f28771c, type: 3}
       propertyPath: m_TagString
       value: Level
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8653e59b10a176548bdd8fe46f28771c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8653e59b10a176548bdd8fe46f28771c, type: 3}
@@ -35044,6 +35053,32 @@ Prefab:
   m_RootGameObject: {fileID: 1514625934}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1960778528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1960778529}
+  m_Layer: 0
+  m_Name: test level center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1960778529
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1960778528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 64.2098312, y: 3.6883812, z: -62.8809891}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1001 &1961244657
 Prefab:
   m_ObjectHideFlags: 0
@@ -35109,6 +35144,7 @@ GameObject:
   - 124: {fileID: 1979509175}
   - 81: {fileID: 1979509174}
   - 114: {fileID: 1979509179}
+  - 45: {fileID: 1979509180}
   m_Layer: 0
   m_Name: Follow camera
   m_TagString: MainCamera
@@ -35172,8 +35208,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1979509173}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: -.707106829}
-  m_LocalPosition: {x: 173.426102, y: 63.3963852, z: -243.158646}
+  m_LocalRotation: {x: -8.80454554e-09, y: .707106829, z: 2.56482533e-08, w: -.707106769}
+  m_LocalPosition: {x: 173.426102, y: 55.8897896, z: -243.158646}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -35189,6 +35225,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1627703060}
+--- !u!45 &1979509180
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1979509173}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 3e944d46af8100145b69b23540649da7, type: 2}
 --- !u!1 &2000964592
 GameObject:
   m_ObjectHideFlags: 0
