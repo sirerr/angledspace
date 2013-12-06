@@ -31,4 +31,5 @@ MonoBehaviour:
     objectVariables: []
     materialVariables: []
     textureVariables: []
-  events: []
+  events:
+  - start scene
