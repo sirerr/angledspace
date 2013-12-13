@@ -9,6 +9,7 @@ Material:
   m_Name: water
   m_Shader: {fileID: 31, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -57,12 +58,12 @@ Material:
     m_Floats:
       data:
         first:
-          name: _EmissionLM
-        second: 0
-      data:
-        first:
           name: _InvFade
         second: 1
+      data:
+        first:
+          name: _EmissionLM
+        second: 0
       data:
         first:
           name: _Shininess
@@ -75,7 +76,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: 0, g: .255172729, b: 1, a: .698039234}
       data:
         first:
           name: _TintColor
