@@ -13122,8 +13122,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 12f0f6d26659b4c42880ee9315cdf1ea, type: 3}
   m_PrefabInternal: {fileID: 803768519}
   m_GameObject: {fileID: 759209594}
-  m_LocalRotation: {x: -2.66925682e-08, y: .707105994, z: 2.66925149e-08, w: .707107604}
-  m_LocalPosition: {x: -905.951477, y: 45.1740379, z: -2.24341679}
+  m_LocalRotation: {x: .0922959074, y: .7010566, z: .092295751, w: .701058209}
+  m_LocalPosition: {x: -905.951477, y: 40.2302742, z: -35.9157028}
   m_LocalScale: {x: 4949.75, y: 5766.70264, z: 14762.7607}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13554,27 +13554,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 12f0f6d26659b4c42880ee9315cdf1ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 45.1740379
+      value: 40.2302742
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 12f0f6d26659b4c42880ee9315cdf1ea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.24341679
+      value: -35.9157028
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 12f0f6d26659b4c42880ee9315cdf1ea, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -2.66925682e-08
+      value: .0922959074
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 12f0f6d26659b4c42880ee9315cdf1ea, type: 3}
       propertyPath: m_LocalRotation.y
-      value: .707105994
+      value: .7010566
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 12f0f6d26659b4c42880ee9315cdf1ea, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 2.66925149e-08
+      value: .092295751
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 12f0f6d26659b4c42880ee9315cdf1ea, type: 3}
       propertyPath: m_LocalRotation.w
-      value: .707107604
+      value: .701058209
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 12f0f6d26659b4c42880ee9315cdf1ea, type: 3}
       propertyPath: m_LocalScale.x
@@ -20288,7 +20288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previewOnGUI: 1
   enableGUILayout: 1
-  drawStateLabels: 1
+  drawStateLabels: 0
   GUITextureStateLabels: 1
   GUITextStateLabels: 1
   filterLabelsWithDistance: 0
@@ -23093,7 +23093,7 @@ MeshCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1164305804}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5410a64fad11e8d6d00011d98d76c639, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -25043,7 +25043,7 @@ Prefab:
       objectReference: {fileID: 284861330}
     - target: {fileID: 11400002, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
       propertyPath: incSpeed
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
       propertyPath: maxSpeed
@@ -33187,7 +33187,7 @@ MonoBehaviour:
   maxPower: 0
   hpBip: {fileID: 2800000, guid: 1979bbdeb671e5c4bb32af6c8becb005, type: 3}
   halfBip: {fileID: 2800000, guid: aec1864a71af85e43b295f917bf2d8f9, type: 3}
-  incSpeed: 50
+  incSpeed: 30
   maxSpeed: 30
   jumpPow: 25
   grav: -100
