@@ -9471,7 +9471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &653484722
 Transform:
   m_ObjectHideFlags: 0
@@ -18318,7 +18318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previewOnGUI: 1
   enableGUILayout: 1
-  drawStateLabels: 1
+  drawStateLabels: 0
   GUITextureStateLabels: 1
   GUITextStateLabels: 1
   filterLabelsWithDistance: 0
@@ -22687,6 +22687,10 @@ Prefab:
       propertyPath: maxSpeed
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
+      propertyPath: trails
+      value: 
+      objectReference: {fileID: 653484721}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
   m_RootGameObject: {fileID: 1627703060}
@@ -30508,6 +30512,7 @@ MonoBehaviour:
   maxSpeed: 30
   jumpPow: 25
   grav: -100
+  trails: {fileID: 653484721}
 --- !u!135 &1627703064
 SphereCollider:
   m_ObjectHideFlags: 0

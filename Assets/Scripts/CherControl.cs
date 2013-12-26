@@ -39,6 +39,7 @@ public class CherControl : MonoBehaviour {
 	public float grav;
 	float horzSpeed;
 	float vertSpeed;
+	public GameObject trails;
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -65,11 +66,17 @@ public class CherControl : MonoBehaviour {
 		}else if(vertSpeed < incSpeed-2 && horzSpeed < incSpeed-2){
 			sparks.Stop ();
 		}
-		
+
 		if(Input.GetButton ("Fire1")){
 			weapon.animation.Play ("Attack");
+			trails.SetActive(true);
+		}else if(Input.GetButton ("Fire2"))
+		{ weapon.animation.Play ("Xattack");
+			trails.SetActive(true);
+		}else{
+			trails.SetActive(false);
 		}
-		
+
 		if(weapon.animation.isPlaying){
 			weapTrigger.collider.enabled = true;
 		}else{

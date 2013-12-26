@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EnemControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CherControl.cs">
     <Files>
-      <File FileName="Assets\Scripts\EnemControl.cs" Line="22" Column="21" />
+      <File FileName="Assets\Scripts\CherControl.cs" Line="75" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
