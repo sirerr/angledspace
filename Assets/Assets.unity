@@ -5352,15 +5352,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: b5382bde2b04c3043802ac26c2f3e3ea, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -152.32814
+      value: -1325.09021
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b5382bde2b04c3043802ac26c2f3e3ea, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -11.2291985
+      value: 92.3690033
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b5382bde2b04c3043802ac26c2f3e3ea, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -120.861496
+      value: 307.699738
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b5382bde2b04c3043802ac26c2f3e3ea, type: 2}
       propertyPath: m_LocalRotation.x
@@ -5368,7 +5368,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b5382bde2b04c3043802ac26c2f3e3ea, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: .707105994
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b5382bde2b04c3043802ac26c2f3e3ea, type: 2}
       propertyPath: m_LocalRotation.z
@@ -5376,7 +5376,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b5382bde2b04c3043802ac26c2f3e3ea, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: .707107604
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b5382bde2b04c3043802ac26c2f3e3ea, type: 2}
@@ -15906,8 +15906,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: b5382bde2b04c3043802ac26c2f3e3ea, type: 2}
   m_PrefabInternal: {fileID: 502378836}
   m_GameObject: {fileID: 898074596}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -152.32814, y: -11.2291985, z: -120.861496}
+  m_LocalRotation: {x: 0, y: .707105994, z: 0, w: .707107604}
+  m_LocalPosition: {x: -1325.09021, y: 92.3690033, z: 307.699738}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1499436768}
@@ -28908,70 +28908,6 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 1
   m_CullingType: 0
---- !u!1 &1508697987
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1508697990}
-  - 114: {fileID: 1508697989}
-  - 154: {fileID: 1508697988}
-  m_Layer: 0
-  m_Name: grass layer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!154 &1508697988
-TerrainCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1508697987}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_TerrainData: {fileID: 15600000, guid: dee5cd2f80c4f92489b60f80c41bfc90, type: 2}
-  m_CreateTreeColliders: 1
---- !u!114 &1508697989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1508697987}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12000, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TerrainData: {fileID: 15600000, guid: dee5cd2f80c4f92489b60f80c41bfc90, type: 2}
-  m_TreeDistance: 2000
-  m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
-  m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
-  m_DetailObjectDensity: 1
-  m_HeightmapPixelError: 5
-  m_SplatMapDistance: 1000
-  m_HeightmapMaximumLOD: 0
-  m_CastShadows: 1
-  m_LightmapIndex: -1
-  m_LightmapSize: 1024
-  m_DrawTreesAndFoliage: 1
-  m_MaterialTemplate: {fileID: 0}
---- !u!4 &1508697990
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1508697987}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -474.407196, y: -12.7753983, z: -513.141968}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
 --- !u!1 &1524779226
 GameObject:
   m_ObjectHideFlags: 0
