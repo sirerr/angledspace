@@ -234,6 +234,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100026
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400026}
+  - 96: {fileID: 9600000}
+  m_Layer: 0
+  m_Name: trailer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -289,6 +305,7 @@ Transform:
   - {fileID: 400000}
   - {fileID: 400018}
   - {fileID: 400008}
+  - {fileID: 400026}
   m_Father: {fileID: 400004}
 --- !u!4 &400008
 Transform:
@@ -389,6 +406,17 @@ Transform:
   m_LocalScale: {x: 52.5478783, y: 52.5478783, z: 52.5478745}
   m_Children: []
   m_Father: {fileID: 400004}
+--- !u!4 &400026
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100026}
+  m_LocalRotation: {x: .99993217, y: -7.1029433e-07, z: .0116463816, w: -9.73668534e-07}
+  m_LocalPosition: {x: -1.58963108, y: .00978309289, z: .00642423006}
+  m_LocalScale: {x: .333333313, y: .333333373, z: .333333373}
+  m_Children: []
+  m_Father: {fileID: 400006}
 --- !u!20 &2000000
 Camera:
   m_ObjectHideFlags: 1
@@ -744,6 +772,48 @@ Animator:
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
   m_HasTransformHierarchy: 1
+--- !u!96 &9600000
+TrailRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100026}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 40f57ebd2bb1d06438e16921924ecf42, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_Time: .300000012
+  m_StartWidth: 5
+  m_EndWidth: .300000012
+  m_Colors:
+    m_Color[0]:
+      serializedVersion: 2
+      rgba: 1741736376
+    m_Color[1]:
+      serializedVersion: 2
+      rgba: 385271460
+    m_Color[2]:
+      serializedVersion: 2
+      rgba: 4294967295
+    m_Color[3]:
+      serializedVersion: 2
+      rgba: 4294967295
+    m_Color[4]:
+      serializedVersion: 2
+      rgba: 16777215
+  m_MinVertexDistance: .5
+  m_Autodestruct: 0
 --- !u!111 &11100000
 Animation:
   m_ObjectHideFlags: 1
@@ -796,10 +866,11 @@ MonoBehaviour:
   maxPower: 0
   hpBip: {fileID: 2800000, guid: 1979bbdeb671e5c4bb32af6c8becb005, type: 3}
   halfBip: {fileID: 2800000, guid: aec1864a71af85e43b295f917bf2d8f9, type: 3}
-  incSpeed: 30
-  maxSpeed: 10
+  incSpeed: 40
+  maxSpeed: 30
   jumpPow: 25
   grav: -100
+  trails: {fileID: 100026}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
