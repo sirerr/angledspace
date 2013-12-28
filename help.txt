@@ -1,0 +1,17 @@
+find spawn points by tag
+
+var gos : GameObject[];
+gos = GameObject.FindGameObjectsWithTag("Enemy");
+if(gos.length > 20)
+{
+  // Do Something
+}
+
+place in array
+
+create random number
+
+create enemy from that array location
+
+detect if enemy is around, decrease by deaths.
+
