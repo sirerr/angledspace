@@ -2037,7 +2037,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 422120963}
   m_LocalRotation: {x: 0, y: -.38268292, z: 0, w: .923879743}
-  m_LocalPosition: {x: 264.52002, y: 5.52984619, z: 286.751709}
+  m_LocalPosition: {x: 159.673004, y: 24.8225937, z: 352.030304}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2323,8 +2323,8 @@ MonoBehaviour:
   halfBip: {fileID: 2800000, guid: aec1864a71af85e43b295f917bf2d8f9, type: 3}
   incSpeed: 40
   maxSpeed: 30
-  jumpPow: 25
-  grav: -100
+  jumpPow: 30
+  grav: -50
   trails: {fileID: 761798487}
 --- !u!1 &704257618
 GameObject:
@@ -2349,6 +2349,56 @@ Transform:
   m_GameObject: {fileID: 704257618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 211.792969, y: 5.52984619, z: 210.957703}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!1 &729469112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 729469114}
+  - 132: {fileID: 729469113}
+  m_Layer: 0
+  m_Name: Level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!132 &729469113
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 729469112}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: level
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: 16d9b8071d4243c438015539db866841, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 25
+  m_FontStyle: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286785058
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!4 &729469114
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 729469112}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .5, y: .899999976, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3317,21 +3367,21 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1478639216}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &1478639218
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1478639216}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!92 &1478639219
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1478639216}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1478639220
 Camera:
   m_ObjectHideFlags: 0
@@ -4894,6 +4944,7 @@ GameObject:
   - 124: {fileID: 1692481277}
   - 81: {fileID: 1692481276}
   - 114: {fileID: 1692481275}
+  - 45: {fileID: 1692481281}
   m_Layer: 0
   m_Name: CamA
   m_TagString: MainCamera
@@ -4919,7 +4970,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1692481274}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!124 &1692481277
 Behaviour:
   m_ObjectHideFlags: 0
@@ -4943,7 +4994,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: .431372553, g: .996078432, b: .996078432, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -4974,6 +5025,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!45 &1692481281
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1692481274}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 3e944d46af8100145b69b23540649da7, type: 2}
 --- !u!1 &1708427575
 GameObject:
   m_ObjectHideFlags: 0
@@ -6636,8 +6695,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy1: {fileID: 100006, guid: be6464387b4cf764dbe5338733e39235, type: 2}
   enemy2: {fileID: 100000, guid: 679daa8d0af133f499b22cc6d7068435, type: 2}
-  levelinc: 10
+  levelinc: 1
   levelchoice: 10
+  currentlevel: {fileID: 729469113}
 --- !u!4 &2011572471
 Transform:
   m_ObjectHideFlags: 0

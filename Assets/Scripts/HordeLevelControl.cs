@@ -9,8 +9,9 @@ public class HordeLevelControl : MonoBehaviour {
 	public GameObject enemy1;
 	public GameObject enemy2;
 	private int spoint;
-	public int levelinc = 2;
+	public int levelinc = 1;
 	public int levelchoice = 10;
+	public GUIText currentlevel;
 
 	// Use this for initialization
 	void Start () {
@@ -39,7 +40,8 @@ public class HordeLevelControl : MonoBehaviour {
 			}
 				else 
 			{
-			levelinc++;
+			
+				currentlevel.text = "Level: "+ levelinc;
 
 			for(int i=0;i<=levelinc;i++){
 				spoint = Randompoint(spoint);
@@ -48,6 +50,7 @@ public class HordeLevelControl : MonoBehaviour {
 			Instantiate (enemy2,espawns[spoint].transform.position,Quaternion.identity);
 			
 				}
+				levelinc++;
 			}
 		}
 	}

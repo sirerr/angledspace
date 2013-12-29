@@ -403,8 +403,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58397f1e1bcea6e48a3ad29f00b912cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
-  lasSpeed: 60
+  speed: 60
+  lasSpeed: 80
   lasDam: 10
   laser: {fileID: 100000, guid: e16b3b84fa91e0e49a946763fc024d08, type: 2}
 --- !u!135 &13500000
