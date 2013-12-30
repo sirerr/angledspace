@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HordeLevelControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Loadlevel.cs">
     <Files>
-      <File FileName="Assets\Scripts\HordeLevelControl.cs" Line="44" Column="22" />
-      <File FileName="Assets\Scripts\HordeLevelControl.cs" Line="36" Column="51" />
+      <File FileName="Assets\Scripts\Loadlevel.cs" Line="23" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
