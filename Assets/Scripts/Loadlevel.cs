@@ -4,9 +4,8 @@ using System.Collections;
 public class Loadlevel : MonoBehaviour {
 	public int level;
 	public GUIText levelselected;
-	public GameObject lookater;
 	private float apress;
-
+	private string looker;
 
 	// Use this for initialization
 	void Start () {
@@ -19,13 +18,15 @@ public class Loadlevel : MonoBehaviour {
 		apress = Input.GetAxis("Dash");
 
 		RaycastHit hit;
-		Ray starter = new Ray(transform.position,Vector3.up);
+		Ray starter = new Ray(transform.position,Vector3.down);
 
-		Physics.Raycast(starter,out hit,100f);
-	
-		if(hit.collider.gameObject == lookater)
+		if(Physics.Raycast(starter,out hit,100f)){
+		looker = hit.collider.gameObject.name;
+		Debug.Log (looker);
+
+		if(looker == "looker")
 		{
-		
+			//Debug.Log ("Hitting looker");
 			levelselected.text = "Press A to Start";
 
 			if(apress == 1){
@@ -37,4 +38,6 @@ public class Loadlevel : MonoBehaviour {
 		}
 
 	}
+	
+}
 }
