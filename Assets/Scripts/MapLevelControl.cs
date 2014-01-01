@@ -8,6 +8,7 @@ public class MapLevelControl : MonoBehaviour {
 	public GameObject map;
 	private float vert;
 	private float hor;
+	public GUIText levelselected;
  
 
 	
@@ -45,6 +46,11 @@ public class MapLevelControl : MonoBehaviour {
 
 		Physics.Raycast(atmap,out hit,100f);
 		mapselected.text = hit.collider.name;
+		levelselected.text = "Press A to Start";
 
+		if (Input.GetButtonDown("Dash"))
+		{
+			Application.LoadLevel(mapselected.text.Replace("Lv", "").Replace(" ", ""));
+		}
 	}
 }

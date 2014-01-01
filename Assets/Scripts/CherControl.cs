@@ -40,6 +40,7 @@ public class CherControl : MonoBehaviour {
 	float horzSpeed;
 	float vertSpeed;
 	public GameObject trails;
+	public AudioClip swordswipe;
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -70,6 +71,8 @@ public class CherControl : MonoBehaviour {
 		if(Input.GetButton ("Fire1")){
 			weapon.animation.Play ("Attack");
 			trails.SetActive(true);
+			audio.Play();
+
 		}else if(Input.GetButton ("Fire2"))
 		{ weapon.animation.Play ("Xattack");
 			trails.SetActive(true);
