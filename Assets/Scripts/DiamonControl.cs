@@ -72,8 +72,14 @@ public class DiamonControl : MonoBehaviour {
 		}
 		
 		moveY += (transform.position.y - diaHeight);
-		
 		movePos = new Vector3(moveX, moveY, moveZ);
+
+		if(Physics.Raycast (transform.position, movePos, out hit)){
+			if(hit.distance <= Vector3.Distance (transform.position, movePos)){
+				movePos = 0.9f * Vector3.Normalize(hit.point-movePos) + movePos;
+			}
+		}
+
 		isMove = true;
 	}
 
