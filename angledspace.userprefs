@@ -1,7 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DiamonControl.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CameraControl.cs">
     <Files>
+      <File FileName="Assets\Scripts\CameraControl.cs" Line="40" Column="4" />
       <File FileName="Assets\Scripts\DiamonControl.cs" Line="74" Column="47" />
     </Files>
   </MonoDevelop.Ide.Workbench>
