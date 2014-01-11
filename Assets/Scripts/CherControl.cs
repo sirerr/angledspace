@@ -9,6 +9,7 @@ public class CherControl : MonoBehaviour {
 		
 		health = maxHealth;
 		power = 0;
+		rolling = GetComponent<AudioSource>();
 	}
 	
 	public GameObject dude;
@@ -40,7 +41,8 @@ public class CherControl : MonoBehaviour {
 	float horzSpeed;
 	float vertSpeed;
 	public GameObject trails;
- 
+	private AudioSource rolling;
+
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -53,10 +55,16 @@ public class CherControl : MonoBehaviour {
 		
 		horzSpeed = realSpeed*Input.GetAxis ("Horizontal");
 		vertSpeed = -realSpeed*Input.GetAxis ("Vertical");
-		
+
+		//Need code here to say if player is touching the ground play sound
+
 		if(Input.GetAxis ("Horizontal") != 0 || Input.GetAxis ("Vertical") != 0){
 			rigidbody.rotation = Quaternion.Lerp (rigidbody.rotation, Quaternion.LookRotation(moveRef.worldToCameraMatrix.MultiplyVector(new Vector3(horzSpeed, rigidbody.velocity.y, vertSpeed))), Time.deltaTime*10);
+			rolling.pitch = 2;
+			rolling.enabled = true;
 		}
+		else {rolling.enabled = false;}
+
 		
 		rigidbody.velocity = moveRef.worldToCameraMatrix.MultiplyVector (new Vector3(horzSpeed, rigidbody.velocity.y, vertSpeed));
 		dude.transform.Rotate(new Vector3(rigidbody.velocity.z, 0, -rigidbody.velocity.x), Space.World);
@@ -88,12 +96,14 @@ public class CherControl : MonoBehaviour {
 		
 		if(Input.GetButtonDown ("Jump")){
 			rigidbody.velocity = Vector3.up*jumpPow;
+			rolling.enabled = false;
 		}
 
 		if(Input.GetButton ("Dash")){
 			isDash = true;
 			dashes.Play ();
 			StartCoroutine ("dashCount");
+			rolling.pitch = 3;
 		}
 	}
 		
