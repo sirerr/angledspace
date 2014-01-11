@@ -23,29 +23,26 @@ public class CameraControl : MonoBehaviour {
 			//resetPos.z -= 50;
 			resetPos = CherControl.playerPos;
 			resetPos.x += 50;
-			
 		
 			//offScreen = true;
 		}
-		
-		if(!offScreen){
-			if((charPos.x < Screen.width*0.4 && charVel.x < 0) || (charPos.x > Screen.width*0.6 && charVel.x > 0)){
-				transform.position += transform.right*charVel.x*Time.deltaTime;
-			}
 			
-			if((charPos.y < Screen.height*0.4 && charVel.y < 0) || (charPos.y > Screen.height*0.6 && charVel.y > 0)){
-				transform.position += transform.up*charVel.y*Time.deltaTime;
-			}
-				
-			if((Vector3.Distance (transform.position, player.transform.position) > 50 && charVel.z < 0) || (Vector3.Distance (transform.position, player.transform.position) < 25 && charVel.z > 0)){
-				transform.position += transform.forward*-charVel.z*Time.deltaTime;
-			}
-		}else{
-			transform.position = Vector3.Lerp (transform.position, resetPos, Time.deltaTime*10);
-			
-			if(transform.position == resetPos){
-				offScreen = false;
-			}
+		if((charPos.x < Screen.width*0.4f && charVel.x < 0) || (charPos.x > Screen.width*0.6f && charVel.x > 0)){
+			transform.position += transform.right*charVel.x*Time.deltaTime;
 		}
+
+		if((charPos.y < Screen.height*0.4f && charVel.y < 0) || (charPos.y > Screen.height*0.6f && charVel.y > 0)){
+			transform.position += transform.up*charVel.y*Time.deltaTime;
+		}
+			
+		if((Vector3.Distance (transform.position, player.transform.position) > 50 && charVel.z < 0) || (Vector3.Distance (transform.position, player.transform.position) < 25 && charVel.z > 0)){
+			transform.position += transform.forward*-charVel.z*Time.deltaTime;
+		}
+	}
+
+	void OnGUI(){
+		Vector3 charVel = camera.worldToCameraMatrix.MultiplyVector(player.rigidbody.velocity);
+
+		GUI.Box (new Rect(30, 60, 150, 50), charVel.ToString ());
 	}
 }
