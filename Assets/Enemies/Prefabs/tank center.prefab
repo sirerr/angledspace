@@ -25,9 +25,10 @@ GameObject:
   - 4: {fileID: 400002}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  - 95: {fileID: 9500000}
   - 64: {fileID: 6400000}
   - 114: {fileID: 11400000}
+  - 111: {fileID: 11100000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: tank
   m_TagString: Enemy
@@ -37,7 +38,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &100004
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -107,12 +108,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 149.173401, y: -10.0118732, z: -2.50407267}
+  m_LocalPosition: {x: 0, y: 3.10752487, z: 17.6886082}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
   - {fileID: 400006}
-  - {fileID: 400004}
   m_Father: {fileID: 0}
 --- !u!4 &400002
 Transform:
@@ -125,6 +125,7 @@ Transform:
   m_LocalScale: {x: 238.308716, y: 300, z: 201.587769}
   m_Children:
   - {fileID: 400008}
+  - {fileID: 400004}
   m_Father: {fileID: 400000}
 --- !u!4 &400004
 Transform:
@@ -132,12 +133,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
-  m_LocalRotation: {x: -2.65926218e-07, y: 1, z: 1.57548243e-07, w: 1.09294376e-06}
-  m_LocalPosition: {x: .19480896, y: 2.60348082, z: .616819978}
-  m_LocalScale: {x: 144.035843, y: 144.035843, z: 144.035843}
+  m_LocalRotation: {x: .499999881, y: .49999997, z: .5, w: .500000119}
+  m_LocalPosition: {x: .000396496733, y: -.000649364665, z: .0107243285}
+  m_LocalScale: {x: .480119497, y: .714506865, z: .604408622}
   m_Children:
   - {fileID: 400010}
-  m_Father: {fileID: 400000}
+  m_Father: {fileID: 400002}
 --- !u!4 &400006
 Transform:
   m_ObjectHideFlags: 1
@@ -166,8 +167,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
-  m_LocalRotation: {x: .500000596, y: -.499999404, z: -.499999523, w: .500000477}
-  m_LocalPosition: {x: .0190317724, y: .000421458128, z: .00783194229}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: -.707106829}
+  m_LocalPosition: {x: -8.27015756e-05, y: .0141177978, z: .0180350337}
   m_LocalScale: {x: .00694271643, y: .00694271643, z: .00694271643}
   m_Children: []
   m_Father: {fileID: 400004}
@@ -240,20 +241,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 7b313169eaf49ca408b069937877e4e1, type: 3}
---- !u!95 &9500000
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 7b313169eaf49ca408b069937877e4e1, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!95 &9500002
 Animator:
   serializedVersion: 2
@@ -268,6 +255,21 @@ Animator:
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
   m_HasTransformHierarchy: 1
+--- !u!111 &11100000
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: b9afa281e9f6a2c4ea0788410c002097, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: b9afa281e9f6a2c4ea0788410c002097, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -279,15 +281,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef0cdd79f5aa31a4fbf95f548f6bb22a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 100000, guid: fed566a79f1a1fb49928e16f6ae88b4e, type: 2}
+  bullet: {fileID: 100000, guid: c783a571d5b2c5b43abcb5a4bbb172c1, type: 2}
   tankTop: {fileID: 100004}
-  topBullet: {fileID: 100000, guid: 8eae2b97cfef23248928bfaeffa0197a, type: 2}
+  topBullet: {fileID: 100000, guid: bd1c3266f1170fb40a4028e7654c5a96, type: 2}
   bulletSpawn: {fileID: 100008}
   topSpawn: {fileID: 100010}
   bulletDam: 5
-  bulletSpeed: 30
+  bulletSpeed: 100
   topDam: 5
   topSpeed: 50
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64fefcf5cc4650747b9fea2e75f3b69a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  charBody: {fileID: 0}
+  onDeath: {fileID: 19800000}
+  onHit: {fileID: 0}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
