@@ -15,6 +15,7 @@ public class DiamonControl : MonoBehaviour {
 	bool isMove = false;
 	Vector3 movePos;
 	Vector3 playerPos;
+	public AudioClip emit;
 
 	int shotNum = 0;
 	
@@ -26,6 +27,7 @@ public class DiamonControl : MonoBehaviour {
 		if(isMove){
 			if(this.rigidbody.position == movePos){
 				GameObject lasBlast = Instantiate (laser, transform.position, Quaternion.LookRotation (playerPos)) as GameObject;
+				audio.PlayOneShot(emit,1f);
 				lasBlast.GetComponent<LaserHit>().playerPos = CherControl.playerPos;
 				lasBlast.GetComponent<LaserHit>().speed = lasSpeed;
 				lasBlast.GetComponent<LaserHit>().damage = lasDam;

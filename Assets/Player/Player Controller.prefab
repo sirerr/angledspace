@@ -840,7 +840,7 @@ MonoBehaviour:
   incSpeed: 40
   maxSpeed: 30
   jumpPow: 30
-  grav: -50
+  grav: -100
   trails: {fileID: 100026}
 --- !u!114 &11400004
 MonoBehaviour:

@@ -16,6 +16,7 @@ public class CubexControl : MonoBehaviour {
 	public int speed = 3;
 	public int hitSpeed;
 	public int damage;
+	public AudioClip puncher;
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -53,8 +54,10 @@ public class CubexControl : MonoBehaviour {
 		int hand = Random.Range (0, 2);
 		if(hand == 0){
 			leftHand.SendMessage ("takeTurn");
+			audio.PlayOneShot(puncher,1f);
 		}else if(hand == 1){
 			rightHand.SendMessage("takeTurn");
+			audio.PlayOneShot(puncher,1f);
 		}
 	}
 }
