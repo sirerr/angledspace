@@ -68,7 +68,8 @@ public class CherControl : MonoBehaviour {
 		
 		rigidbody.velocity = moveRef.worldToCameraMatrix.MultiplyVector (new Vector3(horzSpeed, rigidbody.velocity.y, vertSpeed));
 		dude.transform.Rotate(new Vector3(rigidbody.velocity.z, 0, -rigidbody.velocity.x), Space.World);
-		
+
+		//The Spark system
 		if(!isSpark && (vertSpeed >= incSpeed-1 || horzSpeed >= incSpeed-1)){
 			sparks.Play ();
 			isSpark = true;
@@ -101,6 +102,7 @@ public class CherControl : MonoBehaviour {
 
 		if(Input.GetButton ("Dash")){
 			isDash = true;
+			sparks.Play ();
 			dashes.Play ();
 			StartCoroutine ("dashCount");
 			rolling.pitch = 3;
