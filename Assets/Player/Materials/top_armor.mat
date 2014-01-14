@@ -9,6 +9,7 @@ Material:
   m_Name: top_armor
   m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -24,4 +25,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .0120999999, g: .0226000007, b: .0522000007, a: 1}
+        second: {r: .191176474, g: .166746214, b: .140570939, a: 1}

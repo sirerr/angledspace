@@ -122,6 +122,7 @@ public class CherControl : MonoBehaviour {
 	}
 	
 	IEnumerator dashCount(){
+
 		yield return new WaitForSeconds(2);
 		
 		isDash = false;
