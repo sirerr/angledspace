@@ -11,13 +11,16 @@ public class WeapHit : MonoBehaviour {
 	public GameObject circle2;
 	public GameObject circle3;
 	public GameObject circle4;
+	private int arraycount;
 
 
 	// Use this for initialization
 	void Start () {
 		powerpossible = GameObject.FindGameObjectsWithTag("PowerP");
+		Debug.Log (powerpossible.Length);
 		poweruplocation = powerpossible.Length;
-		pcounter = 1;
+		pcounter = 0;
+		arraycount = 0;
 		 
 	}
 	
@@ -31,13 +34,15 @@ public class WeapHit : MonoBehaviour {
 			enemyhit++;
 			Debug.Log(enemyhit);
 			Debug.Log("pcounter" + pcounter);
-		//	if(pcounter <= poweruplocation)
-			//	{
+			Debug.Log (poweruplocation);
+		if(pcounter < poweruplocation)
+				{
 				switch(enemyhit)
 
 				{
 				case 5:
-				Instantiate (circle1,powerpossible[pcounter].transform.position,Quaternion.identity);
+					Instantiate (circle1,powerpossible[pcounter].transform.position,Quaternion.identity);
+					Debug.Log ("instantiate");
 				break;
 				case 10:
 				Instantiate (circle2,powerpossible[pcounter].transform.position,Quaternion.identity);
@@ -50,9 +55,11 @@ public class WeapHit : MonoBehaviour {
 					pcounter++;
 					enemyhit = 0;
 					break;
+				default:
+					break;
 				}
 
-			//} 
+			} 
 			target.gameObject.SendMessage ("takeHit");
 		}
 	}

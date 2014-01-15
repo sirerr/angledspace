@@ -1330,7 +1330,6 @@ GameObject:
   - 23: {fileID: 199824464}
   - 95: {fileID: 199824463}
   - 54: {fileID: 199824462}
-  - 114: {fileID: 199824461}
   m_Layer: 0
   m_Name: sword
   m_TagString: Untagged
@@ -1349,22 +1348,6 @@ Transform:
   m_LocalScale: {x: 26.4599991, y: 26.4599991, z: 26.4599991}
   m_Children: []
   m_Father: {fileID: 1503569659}
---- !u!114 &199824461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400006, guid: c518dd1c579c5964bb39b8e7766a9367,
-    type: 2}
-  m_PrefabInternal: {fileID: 997313567}
-  m_GameObject: {fileID: 199824459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d1d45dc3fd2d4d4d9f8880d5703ce6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  circle1: {fileID: 0}
-  circle2: {fileID: 0}
-  circle3: {fileID: 0}
-  circle4: {fileID: 0}
 --- !u!54 &199824462
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17898,7 +17881,13 @@ Prefab:
       propertyPath: circle4
       value: 
       objectReference: {fileID: 100000, guid: 76517a7269af75548a7e18371fcee334, type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 100000, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400006, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
+    - {fileID: 11400004, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
   m_RootGameObject: {fileID: 1627703060}
   m_IsPrefabParent: 0
@@ -18298,7 +18287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previewOnGUI: 1
   enableGUILayout: 1
-  drawStateLabels: 0
+  drawStateLabels: 1
   GUITextureStateLabels: 1
   GUITextStateLabels: 1
   filterLabelsWithDistance: 0
@@ -38142,7 +38131,6 @@ GameObject:
   - 33: {fileID: 2040643766}
   - 23: {fileID: 2040643765}
   - 95: {fileID: 2040643764}
-  - 114: {fileID: 2040643767}
   - 65: {fileID: 2040643769}
   - 54: {fileID: 2040643768}
   m_Layer: 0
@@ -38210,22 +38198,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 997313567}
   m_GameObject: {fileID: 2040643762}
   m_Mesh: {fileID: 4300000, guid: 4c58befab6bc4a948900484bee6d8d39, type: 3}
---- !u!114 &2040643767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400004, guid: c518dd1c579c5964bb39b8e7766a9367,
-    type: 2}
-  m_PrefabInternal: {fileID: 997313567}
-  m_GameObject: {fileID: 2040643762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d1d45dc3fd2d4d4d9f8880d5703ce6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  circle1: {fileID: 0}
-  circle2: {fileID: 0}
-  circle3: {fileID: 0}
-  circle4: {fileID: 0}
 --- !u!54 &2040643768
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -38466,7 +38438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2084610845
 Transform:
   m_ObjectHideFlags: 0
