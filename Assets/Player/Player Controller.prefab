@@ -244,7 +244,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -972.754578, y: 87.7594757, z: -277.113159}
+  m_LocalPosition: {x: 258.125244, y: 1.55807102, z: 248.137573}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 400012}
@@ -299,8 +299,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
-  m_LocalPosition: {x: -.00590006541, y: -.00573476171, z: -.00380452489}
-  m_LocalScale: {x: 49.1765404, y: 49.1765366, z: 49.1765366}
+  m_LocalPosition: {x: -.00590006541, y: -.00573476171, z: -.000773111999}
+  m_LocalScale: {x: 50.1600723, y: 50.1600685, z: 50.1600685}
   m_Children: []
   m_Father: {fileID: 400004}
 --- !u!4 &400014
@@ -843,7 +843,7 @@ MonoBehaviour:
   halfBip: {fileID: 2800000, guid: aec1864a71af85e43b295f917bf2d8f9, type: 3}
   incSpeed: 40
   maxSpeed: 30
-  jumpPow: 30
+  jumpPow: 50
   grav: -100
   trails: {fileID: 100026}
 --- !u!114 &11400004

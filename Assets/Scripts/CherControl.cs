@@ -96,6 +96,7 @@ public class CherControl : MonoBehaviour {
 		}
 		
 		if(Input.GetButtonDown ("Jump")){
+
 			rigidbody.velocity = Vector3.up*jumpPow;
 			rolling.enabled = false;
 		}
