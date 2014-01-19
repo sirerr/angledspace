@@ -19,6 +19,7 @@ public class CherControl : MonoBehaviour {
 	public Camera moveRef;
 	public ParticleSystem sparks;
 	public ParticleSystem dashes;
+	public GameObject bomb;
 	
 	bool ariel;
 	float vertMove;
@@ -89,6 +90,8 @@ public class CherControl : MonoBehaviour {
 			trails.SetActive(false);
 		}
 
+
+
 		if(weapon.animation.isPlaying){
 			weapTrigger.collider.enabled = true;
 		}else{
@@ -107,6 +110,16 @@ public class CherControl : MonoBehaviour {
 			dashes.Play ();
 			StartCoroutine ("dashCount");
 			rolling.pitch = 3;
+		}
+	}
+
+	void Update (){
+
+		if(Input.GetAxis("Bomber")>0)
+		{
+			Debug.Log("BOMB!");
+			Debug.Log (Input.GetAxis("Bomber"));
+			
 		}
 	}
 		
