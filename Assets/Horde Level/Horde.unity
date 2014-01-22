@@ -2766,7 +2766,7 @@ MonoBehaviour:
   moveRef: {fileID: 1478639220}
   sparks: {fileID: 381489600}
   dashes: {fileID: 1846437712}
-  bomb: {fileID: 0}
+  bomb: {fileID: 100002, guid: 63e665e31d741a3458e7577eedfb6f72, type: 2}
   maxHealth: 100
   maxPower: 0
   hpBip: {fileID: 2800000, guid: 1979bbdeb671e5c4bb32af6c8becb005, type: 3}
@@ -2776,6 +2776,7 @@ MonoBehaviour:
   jumpPow: 50
   grav: -100
   trails: {fileID: 761798487}
+  boom: {fileID: 100002, guid: 63e665e31d741a3458e7577eedfb6f72, type: 2}
 --- !u!82 &675224803
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3788,7 +3789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previewOnGUI: 1
   enableGUILayout: 1
-  drawStateLabels: 0
+  drawStateLabels: 1
   GUITextureStateLabels: 1
   GUITextStateLabels: 1
   filterLabelsWithDistance: 0
@@ -9017,10 +9018,10 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_Strength: 1
-    m_Bias: .0500000007
+    m_Bias: 0
     m_Softness: 4
     m_SoftnessFade: 2.01999998
   m_Cookie: {fileID: 0}
@@ -9031,7 +9032,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 0
   m_ShadowSamples: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -9134,7 +9135,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_Strength: 1
-    m_Bias: .0500000007
+    m_Bias: 0
     m_Softness: 4
     m_SoftnessFade: 1
   m_Cookie: {fileID: 0}
@@ -10045,6 +10046,14 @@ Prefab:
       propertyPath: moveRef
       value: 
       objectReference: {fileID: 1478639220}
+    - target: {fileID: 11400002, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
+      propertyPath: bomb
+      value: 
+      objectReference: {fileID: 100002, guid: 63e665e31d741a3458e7577eedfb6f72, type: 2}
+    - target: {fileID: 11400002, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
+      propertyPath: boom
+      value: 
+      objectReference: {fileID: 100002, guid: 63e665e31d741a3458e7577eedfb6f72, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c518dd1c579c5964bb39b8e7766a9367, type: 2}
   m_RootGameObject: {fileID: 675224798}

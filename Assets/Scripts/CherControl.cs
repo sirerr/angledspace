@@ -43,6 +43,8 @@ public class CherControl : MonoBehaviour {
 	float vertSpeed;
 	public GameObject trails;
 	private AudioSource rolling;
+	private Rigidbody bombie;
+	public GameObject boom;
 
 	
 	// Update is called once per frame
@@ -58,6 +60,16 @@ public class CherControl : MonoBehaviour {
 		vertSpeed = -realSpeed*Input.GetAxis ("Vertical");
 
 		//Need code here to say if player is touching the ground play sound
+
+		
+		if(Input.GetAxis("Bomber")>0)
+		{
+			bombie = Instantiate(boom, transform.position,transform.rotation) as Rigidbody;
+			bombie.rigidbody.AddForce(Vector3.up *10);
+			Debug.Log("BOMB!");
+			Debug.Log (Input.GetAxis("Bomber"));
+			
+		}
 
 		if(Input.GetAxis ("Horizontal") != 0 || Input.GetAxis ("Vertical") != 0){
 			rigidbody.rotation = Quaternion.Lerp (rigidbody.rotation, Quaternion.LookRotation(moveRef.worldToCameraMatrix.MultiplyVector(new Vector3(horzSpeed, rigidbody.velocity.y, vertSpeed))), Time.deltaTime*10);
@@ -115,12 +127,6 @@ public class CherControl : MonoBehaviour {
 
 	void Update (){
 
-		if(Input.GetAxis("Bomber")>0)
-		{
-			Debug.Log("BOMB!");
-			Debug.Log (Input.GetAxis("Bomber"));
-			
-		}
 	}
 		
 	void OnGUI(){
