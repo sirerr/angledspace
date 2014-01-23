@@ -846,6 +846,7 @@ MonoBehaviour:
   jumpPow: 50
   grav: -100
   trails: {fileID: 100026}
+  bomb: {fileID: 100002, guid: 63e665e31d741a3458e7577eedfb6f72, type: 2}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

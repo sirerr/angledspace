@@ -19,8 +19,7 @@ public class CherControl : MonoBehaviour {
 	public Camera moveRef;
 	public ParticleSystem sparks;
 	public ParticleSystem dashes;
-	public GameObject bomb;
-	
+		
 	bool ariel;
 	float vertMove;
 	int health;
@@ -43,8 +42,8 @@ public class CherControl : MonoBehaviour {
 	float vertSpeed;
 	public GameObject trails;
 	private AudioSource rolling;
-	private Rigidbody bombie;
-	public GameObject boom;
+	public GameObject bomb;
+	private Rigidbody boom;
 
 	
 	// Update is called once per frame
@@ -64,8 +63,8 @@ public class CherControl : MonoBehaviour {
 		
 		if(Input.GetAxis("Bomber")>0)
 		{
-			bombie = Instantiate(boom, transform.position,transform.rotation) as Rigidbody;
-			bombie.rigidbody.AddForce(Vector3.up *10);
+			boom = Instantiate(bomb, transform.position,transform.rotation) as Rigidbody;
+			boom.AddForce(Vector3.up * 50);
 			Debug.Log("BOMB!");
 			Debug.Log (Input.GetAxis("Bomber"));
 			
