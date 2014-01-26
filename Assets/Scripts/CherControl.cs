@@ -64,7 +64,7 @@ public class CherControl : MonoBehaviour {
 		if(Input.GetAxis("Bomber")>0)
 		{
 			boom = Instantiate(bomb, transform.position,transform.rotation) as Rigidbody;
-			boom.AddForce(Vector3.up * 50);
+		
 			Debug.Log("BOMB!");
 			Debug.Log (Input.GetAxis("Bomber"));
 			

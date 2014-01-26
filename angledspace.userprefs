@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CherControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Levels\lightcontrol.cs">
     <Files>
-      <File FileName="Assets\Scripts\CherControl.cs" Line="65" Column="4" />
+      <File FileName="Assets\Levels\lightcontrol.cs" Line="18" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
