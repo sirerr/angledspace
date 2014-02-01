@@ -9884,8 +9884,8 @@ Transform:
   m_PrefabInternal: {fileID: 997313567}
   m_GameObject: {fileID: 555264133}
   m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
-  m_LocalPosition: {x: -.00590006541, y: -.00573476171, z: -.00380452489}
-  m_LocalScale: {x: 49.1765404, y: 49.1765366, z: 49.1765366}
+  m_LocalPosition: {x: -.00590006541, y: -.00573476171, z: -.000773111999}
+  m_LocalScale: {x: 50.1600723, y: 50.1600685, z: 50.1600685}
   m_Children: []
   m_Father: {fileID: 1627703061}
 --- !u!95 &555264135
@@ -41444,9 +41444,10 @@ MonoBehaviour:
   halfBip: {fileID: 2800000, guid: aec1864a71af85e43b295f917bf2d8f9, type: 3}
   incSpeed: 40
   maxSpeed: 30
-  jumpPow: 30
+  jumpPow: 50
   grav: -100
   trails: {fileID: 653484721}
+  bomb: {fileID: 100002, guid: 63e665e31d741a3458e7577eedfb6f72, type: 2}
 --- !u!135 &1627703064
 SphereCollider:
   m_ObjectHideFlags: 0

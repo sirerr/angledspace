@@ -5,15 +5,20 @@ public class CameraControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		anchor = transform.position - player.transform.position;
 	}
 	
 	public GameObject player;
-	Vector3 resetPos;
+	Vector3 anchor;
 	bool offScreen = false;
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		transform.position = Vector3.MoveTowards (transform.position, anchor+player.transform.position, 100*Time.deltaTime);
+
+		/*if(Vector3.Distance (transform.position, anchor+player.transform.position) > 10){
+			transform.position += (anchor.transform.position - transform.position)*Time.deltaTime;
+		}
 		Vector3 charPos = camera.WorldToScreenPoint (CherControl.playerPos);
 		Vector3 charVel = camera.worldToCameraMatrix.MultiplyVector(player.rigidbody.velocity);
 		
@@ -37,12 +42,12 @@ public class CameraControl : MonoBehaviour {
 			
 		if((Vector3.Distance (transform.position, player.transform.position) > 50 && charVel.z < 0) || (Vector3.Distance (transform.position, player.transform.position) < 25 && charVel.z > 0)){
 			transform.position += transform.forward*-charVel.z*Time.deltaTime;
-		}
+		}*/
 	}
 
 	void OnGUI(){
-		Vector3 charVel = camera.worldToCameraMatrix.MultiplyVector(player.rigidbody.velocity);
+		//Vector3 charVel = camera.worldToCameraMatrix.MultiplyVector(player.rigidbody.velocity);
 
-		GUI.Box (new Rect(30, 60, 150, 50), charVel.ToString ());
+		//GUI.Box (new Rect(30, 60, 150, 50), charVel.ToString ());
 	}
 }
